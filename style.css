@@ -1,0 +1,103 @@
+:root {
+  --bg: #fbf8f1;
+  --card: #ffffff;
+  --ink: #1f1d1a;
+  --muted: #6b665e;
+  --line: #e7e1d4;
+  --accent: #f5b700;
+  --accent-ink: #1f1d1a;
+  --link: #8a5a00;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16150f;
+    --card: #1f1e18;
+    --ink: #f3efe6;
+    --muted: #a39d92;
+    --line: #2e2c26;
+    --link: #f5c542;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--link); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* 머리글 */
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: 0.08em; }
+.brand svg { width: 26px; height: 26px; flex: none; }
+nav { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+nav .lang { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+
+main { padding: 48px 0 64px; }
+
+h1 { font-size: 32px; line-height: 1.3; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; line-height: 1.4; margin: 40px 0 12px; }
+h3 { font-size: 17px; margin: 24px 0 8px; }
+p, ul, ol { margin: 0 0 14px; }
+li { margin-bottom: 4px; }
+.lead { font-size: 18px; color: var(--muted); margin-bottom: 32px; }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+
+/* 게임 카드 */
+.card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 16px; color: var(--ink); text-decoration: none;
+}
+.card:hover { border-color: var(--accent); }
+.card img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+.card strong { display: block; font-size: 18px; }
+.card span { color: var(--muted); font-size: 15px; }
+
+.game-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.game-head img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
+.game-head h1 { margin: 0; }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; }
+
+.badge { display: inline-block; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+
+.box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 16px 0; }
+.mail { font-size: 20px; font-weight: 700; }
+
+/* 개인정보처리방침 표 */
+.table-scroll { overflow-x: auto; margin: 0 0 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--card); }
+
+/* 바닥글 */
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 13px; color: var(--muted); }
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 26px; }
+  .shots { gap: 8px; }
+  nav { gap: 10px; font-size: 14px; }
+}
+
+.nowrap { white-space: nowrap; }

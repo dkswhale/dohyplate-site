@@ -1,0 +1,580 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T13:23:35+00:00",
+  "title": "Design System: 도이플레이트 DOHYPLATE",
+  "extensions": {
+    "colorMeta": {
+      "fill-yellow": {
+        "role": "primary",
+        "displayName": "칠한 칸 노랑",
+        "canonical": "#ffc93c",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 86.4)",
+          "oklch(26.4% 0.070 86.4)",
+          "oklch(37.9% 0.100 86.4)",
+          "oklch(49.3% 0.131 86.4)",
+          "oklch(60.7% 0.157 86.4)",
+          "oklch(72.1% 0.127 86.4)",
+          "oklch(83.6% 0.097 86.4)",
+          "oklch(95.0% 0.066 86.4)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "남색 잉크",
+        "canonical": "#191f2c",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 265.2)",
+          "oklch(26.4% 0.012 265.2)",
+          "oklch(37.9% 0.017 265.2)",
+          "oklch(49.3% 0.022 265.2)",
+          "oklch(60.7% 0.026 265.2)",
+          "oklch(72.1% 0.021 265.2)",
+          "oklch(83.6% 0.016 265.2)",
+          "oklch(95.0% 0.011 265.2)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "종이",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.4% 0.000 89.9)",
+          "oklch(37.9% 0.000 89.9)",
+          "oklch(49.3% 0.000 89.9)",
+          "oklch(60.7% 0.000 89.9)",
+          "oklch(72.1% 0.000 89.9)",
+          "oklch(83.6% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "grid": {
+        "role": "neutral",
+        "displayName": "모눈",
+        "canonical": "#eef1f5",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 255.5)",
+          "oklch(26.4% 0.003 255.5)",
+          "oklch(37.9% 0.004 255.5)",
+          "oklch(49.3% 0.005 255.5)",
+          "oklch(60.7% 0.006 255.5)",
+          "oklch(72.1% 0.005 255.5)",
+          "oklch(83.6% 0.004 255.5)",
+          "oklch(95.0% 0.003 255.5)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "칸 선",
+        "canonical": "#dce1ea",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 262.4)",
+          "oklch(26.4% 0.006 262.4)",
+          "oklch(37.9% 0.008 262.4)",
+          "oklch(49.3% 0.011 262.4)",
+          "oklch(60.7% 0.013 262.4)",
+          "oklch(72.1% 0.011 262.4)",
+          "oklch(83.6% 0.008 262.4)",
+          "oklch(95.0% 0.006 262.4)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "보조 글자",
+        "canonical": "#535d70",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 263.2)",
+          "oklch(26.4% 0.015 263.2)",
+          "oklch(37.9% 0.021 263.2)",
+          "oklch(49.3% 0.027 263.2)",
+          "oklch(60.7% 0.033 263.2)",
+          "oklch(72.1% 0.026 263.2)",
+          "oklch(83.6% 0.020 263.2)",
+          "oklch(95.0% 0.014 263.2)"
+        ]
+      },
+      "x-mark": {
+        "role": "neutral",
+        "displayName": "X 표시",
+        "canonical": "#aab2c0",
+        "tonalRamp": [
+          "oklch(15.0% 0.005 261.8)",
+          "oklch(26.4% 0.010 261.8)",
+          "oklch(37.9% 0.014 261.8)",
+          "oklch(49.3% 0.018 261.8)",
+          "oklch(60.7% 0.022 261.8)",
+          "oklch(72.1% 0.017 261.8)",
+          "oklch(83.6% 0.013 261.8)",
+          "oklch(95.0% 0.009 261.8)"
+        ]
+      },
+      "guide": {
+        "role": "neutral",
+        "displayName": "5칸 기준선",
+        "canonical": "#7d8698",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 264.3)",
+          "oklch(26.4% 0.013 264.3)",
+          "oklch(37.9% 0.018 264.3)",
+          "oklch(49.3% 0.024 264.3)",
+          "oklch(60.7% 0.029 264.3)",
+          "oklch(72.1% 0.023 264.3)",
+          "oklch(83.6% 0.018 264.3)",
+          "oklch(95.0% 0.012 264.3)"
+        ]
+      },
+      "text-yellow": {
+        "role": "secondary",
+        "displayName": "노랑 계열 글자",
+        "canonical": "#8a5a00",
+        "tonalRamp": [
+          "oklch(15.0% 0.027 73.3)",
+          "oklch(26.4% 0.048 73.3)",
+          "oklch(37.9% 0.068 73.3)",
+          "oklch(49.3% 0.089 73.3)",
+          "oklch(60.7% 0.107 73.3)",
+          "oklch(72.1% 0.086 73.3)",
+          "oklch(83.6% 0.066 73.3)",
+          "oklch(95.0% 0.045 73.3)"
+        ]
+      },
+      "text-blue": {
+        "role": "secondary",
+        "displayName": "파랑 힌트 글자",
+        "canonical": "#3e63dd",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 267.0)",
+          "oklch(26.4% 0.084 267.0)",
+          "oklch(37.9% 0.121 267.0)",
+          "oklch(49.3% 0.157 267.0)",
+          "oklch(60.7% 0.189 267.0)",
+          "oklch(72.1% 0.152 267.0)",
+          "oklch(83.6% 0.116 267.0)",
+          "oklch(95.0% 0.080 267.0)"
+        ]
+      },
+      "text-brown": {
+        "role": "secondary",
+        "displayName": "갈색 힌트 글자",
+        "canonical": "#8a5c36",
+        "tonalRamp": [
+          "oklch(15.0% 0.020 59.2)",
+          "oklch(26.4% 0.035 59.2)",
+          "oklch(37.9% 0.051 59.2)",
+          "oklch(49.3% 0.066 59.2)",
+          "oklch(60.7% 0.079 59.2)",
+          "oklch(72.1% 0.064 59.2)",
+          "oklch(83.6% 0.049 59.2)",
+          "oklch(95.0% 0.034 59.2)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "종이 (어두운 화면)",
+        "canonical": "#11141b",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 266.8)",
+          "oklch(26.4% 0.007 266.8)",
+          "oklch(37.9% 0.009 266.8)",
+          "oklch(49.3% 0.012 266.8)",
+          "oklch(60.7% 0.015 266.8)",
+          "oklch(72.1% 0.012 266.8)",
+          "oklch(83.6% 0.009 266.8)",
+          "oklch(95.0% 0.006 266.8)"
+        ]
+      },
+      "grid-dark": {
+        "role": "neutral",
+        "displayName": "모눈 (어두운 화면)",
+        "canonical": "#1a1f2a",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 265.7)",
+          "oklch(26.4% 0.010 265.7)",
+          "oklch(37.9% 0.014 265.7)",
+          "oklch(49.3% 0.018 265.7)",
+          "oklch(60.7% 0.022 265.7)",
+          "oklch(72.1% 0.018 265.7)",
+          "oklch(83.6% 0.014 265.7)",
+          "oklch(95.0% 0.009 265.7)"
+        ]
+      },
+      "ink-dark": {
+        "role": "primary",
+        "displayName": "남색 잉크 (어두운 화면)",
+        "canonical": "#e8ebf2",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 267.4)",
+          "oklch(26.4% 0.004 267.4)",
+          "oklch(37.9% 0.006 267.4)",
+          "oklch(49.3% 0.008 267.4)",
+          "oklch(60.7% 0.010 267.4)",
+          "oklch(72.1% 0.008 267.4)",
+          "oklch(83.6% 0.006 267.4)",
+          "oklch(95.0% 0.004 267.4)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "보조 글자 (어두운 화면)",
+        "canonical": "#a5adbc",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 263.2)",
+          "oklch(26.4% 0.010 263.2)",
+          "oklch(37.9% 0.015 263.2)",
+          "oklch(49.3% 0.019 263.2)",
+          "oklch(60.7% 0.023 263.2)",
+          "oklch(72.1% 0.019 263.2)",
+          "oklch(83.6% 0.014 263.2)",
+          "oklch(95.0% 0.010 263.2)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "칸 선 (어두운 화면)",
+        "canonical": "#2c3341",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 264.1)",
+          "oklch(26.4% 0.012 264.1)",
+          "oklch(37.9% 0.017 264.1)",
+          "oklch(49.3% 0.022 264.1)",
+          "oklch(60.7% 0.027 264.1)",
+          "oklch(72.1% 0.021 264.1)",
+          "oklch(83.6% 0.016 264.1)",
+          "oklch(95.0% 0.011 264.1)"
+        ]
+      },
+      "x-mark-dark": {
+        "role": "neutral",
+        "displayName": "X 표시 (어두운 화면)",
+        "canonical": "#4d5566",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 265.3)",
+          "oklch(26.4% 0.013 265.3)",
+          "oklch(37.9% 0.019 265.3)",
+          "oklch(49.3% 0.024 265.3)",
+          "oklch(60.7% 0.029 265.3)",
+          "oklch(72.1% 0.024 265.3)",
+          "oklch(83.6% 0.018 265.3)",
+          "oklch(95.0% 0.012 265.3)"
+        ]
+      },
+      "guide-dark": {
+        "role": "neutral",
+        "displayName": "5칸 기준선 (어두운 화면)",
+        "canonical": "#6f788b",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 265.3)",
+          "oklch(26.4% 0.014 265.3)",
+          "oklch(37.9% 0.020 265.3)",
+          "oklch(49.3% 0.026 265.3)",
+          "oklch(60.7% 0.031 265.3)",
+          "oklch(72.1% 0.025 265.3)",
+          "oklch(83.6% 0.019 265.3)",
+          "oklch(95.0% 0.013 265.3)"
+        ]
+      },
+      "text-yellow-dark": {
+        "role": "secondary",
+        "displayName": "노랑 계열 글자 (어두운 화면)",
+        "canonical": "#ffc93c",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 86.4)",
+          "oklch(26.4% 0.070 86.4)",
+          "oklch(37.9% 0.100 86.4)",
+          "oklch(49.3% 0.131 86.4)",
+          "oklch(60.7% 0.157 86.4)",
+          "oklch(72.1% 0.127 86.4)",
+          "oklch(83.6% 0.097 86.4)",
+          "oklch(95.0% 0.066 86.4)"
+        ]
+      },
+      "text-blue-dark": {
+        "role": "secondary",
+        "displayName": "파랑 힌트 글자 (어두운 화면)",
+        "canonical": "#93a9ff",
+        "tonalRamp": [
+          "oklch(15.0% 0.032 272.1)",
+          "oklch(26.4% 0.056 272.1)",
+          "oklch(37.9% 0.080 272.1)",
+          "oklch(49.3% 0.104 272.1)",
+          "oklch(60.7% 0.125 272.1)",
+          "oklch(72.1% 0.101 272.1)",
+          "oklch(83.6% 0.077 272.1)",
+          "oklch(95.0% 0.053 272.1)"
+        ]
+      },
+      "text-brown-dark": {
+        "role": "secondary",
+        "displayName": "갈색 힌트 글자 (어두운 화면)",
+        "canonical": "#d6a67c",
+        "tonalRamp": [
+          "oklch(15.0% 0.020 62.4)",
+          "oklch(26.4% 0.035 62.4)",
+          "oklch(37.9% 0.050 62.4)",
+          "oklch(49.3% 0.066 62.4)",
+          "oklch(60.7% 0.079 62.4)",
+          "oklch(72.1% 0.064 62.4)",
+          "oklch(83.6% 0.049 62.4)",
+          "oklch(95.0% 0.033 62.4)"
+        ]
+      },
+      "brand-mark-yellow": {
+        "role": "tertiary",
+        "displayName": "회사 표식 노랑",
+        "canonical": "#f5b700",
+        "tonalRamp": [
+          "oklch(15.0% 0.042 83.9)",
+          "oklch(26.4% 0.074 83.9)",
+          "oklch(37.9% 0.106 83.9)",
+          "oklch(49.3% 0.137 83.9)",
+          "oklch(60.7% 0.165 83.9)",
+          "oklch(72.1% 0.133 83.9)",
+          "oklch(83.6% 0.102 83.9)",
+          "oklch(95.0% 0.070 83.9)"
+        ]
+      },
+      "game-navy": {
+        "role": "tertiary",
+        "displayName": "게임 남색",
+        "canonical": "#2a2f45",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 274.0)",
+          "oklch(26.4% 0.018 274.0)",
+          "oklch(37.9% 0.025 274.0)",
+          "oklch(49.3% 0.033 274.0)",
+          "oklch(60.7% 0.040 274.0)",
+          "oklch(72.1% 0.032 274.0)",
+          "oklch(83.6% 0.024 274.0)",
+          "oklch(95.0% 0.017 274.0)"
+        ]
+      },
+      "game-white": {
+        "role": "tertiary",
+        "displayName": "게임 흰색",
+        "canonical": "#e4e8f0",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 264.5)",
+          "oklch(26.4% 0.005 264.5)",
+          "oklch(37.9% 0.007 264.5)",
+          "oklch(49.3% 0.010 264.5)",
+          "oklch(60.7% 0.011 264.5)",
+          "oklch(72.1% 0.009 264.5)",
+          "oklch(83.6% 0.007 264.5)",
+          "oklch(95.0% 0.005 264.5)"
+        ]
+      },
+      "game-blue": {
+        "role": "tertiary",
+        "displayName": "게임 파랑",
+        "canonical": "#3e63dd",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 267.0)",
+          "oklch(26.4% 0.084 267.0)",
+          "oklch(37.9% 0.121 267.0)",
+          "oklch(49.3% 0.157 267.0)",
+          "oklch(60.7% 0.189 267.0)",
+          "oklch(72.1% 0.152 267.0)",
+          "oklch(83.6% 0.116 267.0)",
+          "oklch(95.0% 0.080 267.0)"
+        ]
+      },
+      "game-brown": {
+        "role": "tertiary",
+        "displayName": "게임 갈색",
+        "canonical": "#9a6b43",
+        "tonalRamp": [
+          "oklch(15.0% 0.020 60.5)",
+          "oklch(26.4% 0.036 60.5)",
+          "oklch(37.9% 0.052 60.5)",
+          "oklch(49.3% 0.067 60.5)",
+          "oklch(60.7% 0.081 60.5)",
+          "oklch(72.1% 0.065 60.5)",
+          "oklch(83.6% 0.050 60.5)",
+          "oklch(95.0% 0.034 60.5)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "첫 화면·게임 페이지 h1. 휴대폰 44px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "섹션 h2, 게임 카드 h3, 문서 h1. 휴대폰 33px."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "두 열 h2, 메일 칸."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "버튼, 메뉴, 상태 칸, 힌트 숫자, 문서 h2·h3."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "격자 크기 표시, 판권란 항목 이름."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "본문. 휴대폰 16px. keep-all."
+      },
+      "body-small": {
+        "displayName": "Body small",
+        "purpose": "사실 칩, 바닥글, 표."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-color",
+        "value": "background-color .15s ease-out",
+        "purpose": "버튼·메뉴·메일 칸 색 바뀜."
+      },
+      {
+        "name": "press-squash",
+        "value": "transform: scale(1.03, .92) .06s; release .18s cubic-bezier(.34, 1.56, .64, 1)",
+        "purpose": "누른 칸이 납작해졌다 튕겨 돌아옴. 움직임 줄이기에서 끔."
+      },
+      {
+        "name": "cell-fill",
+        "value": ".32s cubic-bezier(.16, 1, .3, 1), 칸마다 (행+열)×28ms 지연, scale(.15)에서 시작",
+        "purpose": "격자가 화면에 35% 들어오면 대각선으로 칠해짐. X는 .3s ease-out, 120ms 뒤."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "960px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "주 버튼",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "노랑 칸 버튼. 한 화면에 하나.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">픽셀 벨트 보기<svg viewBox=\"0 0 11 11\" aria-hidden=\"true\" shape-rendering=\"crispEdges\"><path fill=\"currentColor\" d=\"M1 5h6V3h1v1h1v1h1v1H9v1H8v1H7V6H1z\"/></svg></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:0 24px;border:3px solid var(--ink,#191f2c);background:var(--paper,#fff);color:var(--ink,#191f2c);font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-weight:700;font-size:22px;text-decoration:none;border-radius:0;transition:background-color .15s ease-out,color .15s ease-out,transform .18s cubic-bezier(.34,1.56,.64,1)} .ds-btn svg{width:22px;height:22px} .ds-btn-primary{background:#ffc93c;color:#191f2c} .ds-btn:hover{background:var(--ink,#191f2c);color:var(--paper,#fff)} .ds-btn:active{transform:scale(1.03,.92);transition-duration:.06s} .ds-btn:focus-visible{outline:3px solid var(--ink,#191f2c);outline-offset:3px}"
+    },
+    {
+      "name": "보조 버튼",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "종이 칸 버튼.",
+      "html": "<a class=\"ds-btn2\" href=\"#\">문의하기</a>",
+      "css": ".ds-btn2{display:inline-flex;align-items:center;min-height:60px;padding:0 24px;border:3px solid var(--ink,#191f2c);background:var(--paper,#fff);color:var(--ink,#191f2c);font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-weight:700;font-size:22px;text-decoration:none;transition:background-color .15s ease-out,color .15s ease-out} .ds-btn2:hover{background:var(--ink,#191f2c);color:var(--paper,#fff)} .ds-btn2:focus-visible{outline:3px solid var(--ink,#191f2c);outline-offset:3px}"
+    },
+    {
+      "name": "메뉴 칸",
+      "kind": "nav",
+      "refersTo": "nav-cell",
+      "description": "붙은 칸 줄. 현재 페이지는 남색 칸.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">게임</a><a href=\"#\">문의</a><a href=\"#\">EN</a></nav>",
+      "css": ".ds-nav{display:flex} .ds-nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid var(--ink,#191f2c);margin-left:-2px;font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-weight:700;font-size:22px;color:var(--ink,#191f2c);text-decoration:none;transition:background-color .15s ease-out} .ds-nav a:hover{background:#ffc93c;color:#191f2c} .ds-nav a[aria-current=page]{background:var(--ink,#191f2c);color:var(--paper,#fff)} .ds-nav a:focus-visible{outline:3px solid var(--ink,#191f2c);outline-offset:3px}"
+    },
+    {
+      "name": "상태 칸과 사실 칩",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "사실 칩 줄. 첫 칸이 상태.",
+      "html": "<ul class=\"ds-facts\"><li class=\"ds-tag\">출시 준비 중</li><li>20개 지역</li><li>300개 그림</li><li class=\"ds-tag ds-soon\">준비 중</li></ul>",
+      "css": ".ds-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none} .ds-facts li{display:inline-flex;align-items:center;min-height:36px;border:2px solid var(--line,#dce1ea);padding:0 10px;font-size:15px;color:var(--muted,#535d70);font-family:system-ui,sans-serif} .ds-facts .ds-tag{padding:0 12px;border:2px solid var(--ink,#191f2c);background:#ffc93c;color:#191f2c;font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-weight:700;font-size:22px;line-height:1} .ds-facts .ds-soon{background:transparent;color:var(--muted,#535d70);border:2px dashed var(--x,#aab2c0)}"
+    },
+    {
+      "name": "게임 카드",
+      "kind": "card",
+      "description": "문제 번호 제목, 사실 칩, 그림 칸.",
+      "html": "<article class=\"ds-game\"><div class=\"ds-gi\"><h3><span>No.1</span> 픽셀 벨트</h3><p>벨트에 캐릭터를 태워 보내는 퍼즐 게임이에요.</p></div><div class=\"ds-ga\"></div></article>",
+      "css": ".ds-game{display:grid;grid-template-columns:1fr 1fr;border:3px solid var(--ink,#191f2c);background:var(--paper,#fff)} .ds-gi{padding:36px;display:flex;flex-direction:column;gap:16px} .ds-gi h3{margin:0;font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-size:44px;line-height:1.2;color:var(--ink,#191f2c)} .ds-gi h3 span{color:var(--text-y,#8a5a00)} .ds-gi p{margin:0;font-family:system-ui,sans-serif;font-size:17px;line-height:1.7} .ds-ga{border-left:3px solid var(--ink,#191f2c);background:var(--grid,#eef1f5);min-height:160px}"
+    },
+    {
+      "name": "메일 칸",
+      "kind": "custom",
+      "refersTo": "mail-cell",
+      "description": "메일 주소가 큰 칸.",
+      "html": "<a class=\"ds-mail\" href=\"#\">ramon@dohyplate.com</a>",
+      "css": ".ds-mail{display:inline-flex;align-items:center;padding:18px 24px;border:3px solid var(--ink,#191f2c);background:var(--paper,#fff);font-family:'Galmuri11','Apple SD Gothic Neo',sans-serif;font-weight:700;font-size:33px;line-height:1.2;color:var(--ink,#191f2c);text-decoration:none;transition:background-color .15s ease-out} .ds-mail:hover{background:#ffc93c;color:#191f2c} .ds-mail:focus-visible{outline:3px solid var(--ink,#191f2c);outline-offset:3px}"
+    },
+    {
+      "name": "네모로직 격자",
+      "kind": "custom",
+      "description": "힌트 숫자와 5칸 기준선이 있는 격자 (puzzle.js 출력의 축소판).",
+      "html": "<div class=\"ds-pz\"><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f r\"></i><i class=\"x\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f r\"></i><i class=\"x\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f r\"></i><i class=\"x\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f r\"></i><i class=\"x\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f\"></i><i class=\"f r\"></i><i class=\"x\"></i><i class=\"x\"></i><i class=\"x\"></i><i class=\"x\"></i><i class=\"x\"></i><i class=\"x r\"></i><i class=\"x\"></i></div>",
+      "css": ".ds-pz{display:grid;grid-template-columns:repeat(6,30px);grid-auto-rows:30px;border:3px solid var(--ink,#191f2c);background:var(--paper,#fff);width:max-content} .ds-pz i{position:relative;border-right:1px solid var(--line,#dce1ea);border-bottom:1px solid var(--line,#dce1ea)} .ds-pz i.r{border-right:2px solid var(--guide,#7d8698)} .ds-pz i.f{background:#ffc93c} .ds-pz i.x::before{content:'';position:absolute;inset:26%;background:linear-gradient(45deg,transparent calc(50% - 1px),var(--x,#aab2c0) calc(50% - 1px),var(--x,#aab2c0) calc(50% + 1px),transparent calc(50% + 1px)),linear-gradient(-45deg,transparent calc(50% - 1px),var(--x,#aab2c0) calc(50% - 1px),var(--x,#aab2c0) calc(50% + 1px),transparent calc(50% + 1px))}"
+    }
+  ],
+  "narrative": {
+    "northStar": "네모로직 문제지",
+    "overview": "사이트 전체가 퍼즐 잡지의 문제지 한 장이다. 배경은 흰 종이에 24px 모눈이다. 구조는 굵은 남색 선이 나눈다. 강조는 노랑으로 칠한 칸이 맡는다. 게임 회사 사이트의 기본형(대표 그림 배너와 게임 카드 줄)은 쓰지 않는다. 대신 풀린 칸이 회사 표식과 게임 캐릭터를 그린다.\n\n밀도는 낮다. 한 화면에는 제목 하나, 격자 하나, 행동 버튼 1~2개가 놓인다. 모서리는 모두 직각이다. 그림자는 없다. 깊이는 선의 굵기(1px, 2px, 3px)와 칸의 색으로 만든다. 첫 화면의 격자는 화면에 들어오면 대각선 방향으로 칸마다 칠해진다. 움직임 줄이기를 켜면 칠한 상태로 바로 보인다.\n\n글자는 두 벌이다. 제목·숫자·라벨·버튼은 픽셀 글꼴 Galmuri11 Bold다. 본문은 시스템 산세리프다. 이 묶음은 픽셀 벨트 게임과 같다.",
+    "keyCharacteristics": [
+      "24px 모눈이 모든 페이지 배경이고 정렬 기준이다.",
+      "구조 선은 3px `ink`, 작은 칸 선은 2px, 칸 사이 선은 1px `line`이다.",
+      "모서리 반경은 0px이다. 그림자는 없다.",
+      "Galmuri11 크기는 11px의 배수(11, 22, 33, 44, 66)만 쓴다.",
+      "노랑 `fill-yellow`는 칠한 칸이다. 버튼 하나, 상태 칸, 단계 번호, 링크 밑줄에만 쓴다.",
+      "밝은 화면과 어두운 화면을 모두 지원한다. 게임 그림 색은 어두운 화면에서도 바꾸지 않는다."
+    ],
+    "rules": [
+      {
+        "name": "The Fixed Game Palette Rule",
+        "body": "게임 그림의 칸 색은 어두운 화면에서도 게임 팔레트 값 그대로 둔다. 힌트 숫자 색만 화면 모드를 따른다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink On Yellow Rule",
+        "body": "노랑 칸 위 글자는 화면 모드와 관계없이 `ink`(#191f2c)다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Eleven Rule",
+        "body": "Galmuri11은 11px 픽셀 글꼴이다. 크기는 11의 배수(11, 22, 33, 44, 66px)만 쓴다. 다른 크기에서는 픽셀이 흐려진다.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "제목 위에 작은 분류 라벨을 두지 않는다. 게임의 분류와 상태는 제목 앞 번호(\"No.1\")와 사실 칩 줄의 첫 칩(상태 칸)이 맡는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Cell Module Rule",
+        "body": "새 요소의 크기와 간격은 24px 칸이나 그 절반(12px)의 배수로 잡는다. 버튼 높이 60px, 메뉴 칸 48px, 상태 칸 36px, 단계 번호 칸 48px이 이 규칙을 따른다.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "`box-shadow`와 `text-shadow`를 쓰지 않는다. 종이 위의 잉크에는 그림자가 없다.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Five-Cell Guide Rule",
+        "body": "네모로직 격자는 5칸마다 2px `guide` 선을 긋는다. 맨 끝 줄에는 긋지 않는다.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** 크기와 간격을 24px 칸이나 12px 반 칸의 배수로 잡는다.",
+      "**Do** Galmuri11을 11, 22, 33, 44, 66px로만 쓴다.",
+      "**Do** 구조 테두리는 3px `ink`, 작은 칸은 2px로 긋는다.",
+      "**Do** 네모로직 격자는 5칸마다 2px `guide` 선을 긋는다.",
+      "**Do** 게임 그림 칸은 어두운 화면에서도 게임 팔레트 그대로 둔다.",
+      "**Do** 게임은 \"No.n\" 번호로 시작하고, 상태를 사실 칩 줄의 첫 칸에 둔다.",
+      "**Do** 새 페이지에 머리글(표식, DOHYPLATE, 메뉴 칸)과 바닥글(판권란, 링크, 저작권)을 그대로 복사해 넣는다.",
+      "**Do** 노랑 칸 위 글자는 `#191f2c`로 고정한다."
+    ],
+    "donts": [
+      "**Don't** 모서리를 둥글게 하지 않는다(반경 0px).",
+      "**Don't** 그림자를 쓰지 않는다.",
+      "**Don't** 제목 위에 작은 분류 라벨(eyebrow)을 두지 않는다.",
+      "**Don't** Galmuri11을 11의 배수가 아닌 크기로 쓰지 않는다.",
+      "**Don't** 대표 그림 배너와 게임 카드 줄로 된 게임 회사 사이트 기본형을 쓰지 않는다.",
+      "**Don't** 노랑 주 버튼을 한 화면에 두 개 이상 두지 않는다."
+    ]
+  }
+}

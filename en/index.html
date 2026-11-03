@@ -4,37 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DOHYPLATE</title>
-<meta name="description" content="DOHYPLATE makes mobile puzzle and casual games.">
+<meta name="description" content="DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11141b" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/">
+<link rel="preload" href="/fonts/Galmuri11-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
+<script src="/puzzle.js" defer></script>
 </head>
 <body>
-<header><div class="wrap">
-  <a class="brand" href="/en/"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg>DOHYPLATE</a>
-  <nav><a href="/en/pixel-belt/">Games</a><a href="/en/support/">Support</a><a class="lang" href="/" lang="ko">한국어</a></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="head"><div class="wrap">
+  <a class="brand" href="/en/" aria-label="DOHYPLATE"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg><span>DOHYPLATE</span></a>
+  <nav class="nav" aria-label="Main"><a href="/en/#games">Games</a><a href="/en/support/">Support</a><a href="/" lang="ko">한국어</a></nav>
 </div></header>
 
-<main><div class="wrap">
-  <h1>Short breaks,<br>puzzles you remember</h1>
-  <p class="lead">DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.</p>
+<main id="main">
+<div class="wrap hero">
+  <div>
+    <h1>Short breaks,<br>puzzles you<br>remember</h1>
+    <p class="lead">DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.</p>
+    <div class="actions">
+      <a class="btn primary" href="/en/pixel-belt/">Pixel Belt<svg viewBox="0 0 11 11" aria-hidden="true" shape-rendering="crispEdges"><path fill="currentColor" d="M1 5h6V3h1v1h1v1h1v1H9v1H8v1H7V6H1z"/></svg></a>
+      <a class="btn" href="/en/support/">Contact</a>
+    </div>
+  </div>
+  <div class="puzzle" aria-hidden="true" style="--cols:15;--rows:15" data-art="YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN YYYYYYY.NNNNNNN ............... NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY NNNNNNN.YYYYYYY"></div>
+</div>
 
-  <h2>Games</h2>
-  <a class="card" href="/en/pixel-belt/">
-    <img src="/img/logo-c.png" alt="" width="72" height="72">
-    <div><strong>Pixel Belt</strong><span>A pixel puzzle with a conveyor belt · Coming soon</span></div>
-  </a>
+<section class="section" id="games" aria-labelledby="games-h"><div class="wrap">
+  <h2 id="games-h">Games</h2>
+  <div class="games">
+    <article class="game feature">
+      <div class="game-info">
+        <img class="game-icon" src="/img/logo-c.png" alt="" width="96" height="96">
+        <h3><span class="no">No.1</span> Pixel Belt</h3>
+        <p>Send characters onto a conveyor belt. They clear the cubes of a pixel picture, one color at a time.</p>
+        <ul class="facts"><li class="tag">Coming soon</li><li>20 regions</li><li>300 pictures</li><li>Toss · App&nbsp;Store · Google&nbsp;Play · ONE&nbsp;store</li></ul>
+        <a class="btn more" href="/en/pixel-belt/">Learn more<svg viewBox="0 0 11 11" aria-hidden="true" shape-rendering="crispEdges"><path fill="currentColor" d="M1 5h6V3h1v1h1v1h1v1H9v1H8v1H7V6H1z"/></svg></a>
+      </div>
+      <div class="game-art"><div class="shot-strip"><img src="/img/screenshot-1.png" alt="Play screen: tap a character to put it on the belt, and it clears cubes of its color" width="636" height="1048" loading="lazy"><img src="/img/screenshot-2.png" alt="Map screen: each picture you complete brings color back to the island" width="636" height="1048" loading="lazy"><img src="/img/screenshot-3.png" alt="Clear screen: 20 regions and 300 pictures to collect" width="636" height="1048" loading="lazy"></div></div>
+    </article>
+    <article class="game dim">
+      <div class="game-info">
+        <h3><span class="no">No.2</span> Clock-Out Escape</h3>
+        <p>A tiny office worker runs a 3D obstacle course of keyboard paths to get home on time.</p>
+        <ul class="facts"><li class="tag soon">In development</li><li>Working title</li></ul>
+      </div>
+      <div class="game-art">
+        <div><div class="puzzle" aria-hidden="true" style="--cols:10;--rows:10" data-art=".NNNNNNNN. N........N N...Y....N N....Y...N N.YYYYYY.N N....Y...N N...Y....N N........N .NNNNNNNN. .........." data-reveal="0.24"></div><p class="note">Still solving this one.</p></div>
+      </div>
+    </article>
+  </div>
+</div></section>
 
-  <h2>Contact</h2>
+<section class="section" id="contact" aria-labelledby="contact-h"><div class="wrap">
+  <h2 id="contact-h">Contact</h2>
   <p>For game support, partnerships, and other questions, send us an email.</p>
-  <p><a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></p>
-</div></main>
+  <a class="mail-cell" href="mailto:ramon@dohyplate.com"><svg viewBox="0 0 11 11" aria-hidden="true" shape-rendering="crispEdges"><path fill="currentColor" fill-rule="evenodd" d="M0 2h11v8H0zM1 3v6h9V3z"/><path fill="currentColor" d="M2 3h1v1h1v1h1v1h1V5h1V4h1V3h1v1H8v1H7v1H6v1H5V6H4V5H3V4H2z"/></svg>ramon@dohyplate.com</a>
+  <p class="note">Payment and refund help is on the <a href="/en/support/">Support</a> page.</p>
+</div></section>
+</main>
 
-<footer><div class="wrap">
-  <p>DOHYPLATE (도이플레이트) · Representative: Dohyung Kim · Business registration no. <span class="nowrap">794-13-02501</span> (Republic of Korea)</p>
-  <p>Contact <a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></p>
-  <p>© 2026 DOHYPLATE</p>
+<footer class="foot"><div class="wrap">
+  <dl class="colophon">
+    <dt>Company</dt><dd>DOHYPLATE (도이플레이트)</dd>
+    <dt>Representative</dt><dd>Dohyung Kim</dd>
+    <dt>Business registration no.</dt><dd><span class="nowrap">794-13-02501</span> <span class="nowrap">(Republic of Korea)</span></dd>
+    <dt>Email</dt><dd><a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></dd>
+  </dl>
+  <div class="foot-links">
+    <a href="/en/pixel-belt/privacy/">Pixel Belt Privacy Policy</a>
+    <a href="/en/support/">Support</a>
+    <p>© 2026 DOHYPLATE</p>
+  </div>
 </div></footer>
 </body>
 </html>

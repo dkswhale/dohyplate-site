@@ -1,23 +1,45 @@
+/* 도이플레이트 사이트: 한 장의 네모로직 문제지. 흰 종이, 옅은 모눈, 남색 격자, 노랑으로 칠한 칸.
+   제목·숫자·라벨은 Galmuri11 Bold(11px 픽셀 글꼴이라 11의 배수 크기에서 선명하다), 본문은 시스템 글꼴.
+   간격은 모눈 한 칸(--cell, 24px)의 배수로 둔다. */
+
+@font-face {
+  font-family: 'Galmuri11';
+  src: url('/fonts/Galmuri11-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
-  --bg: #fbf8f1;
-  --card: #ffffff;
-  --ink: #1f1d1a;
-  --muted: #6b665e;
-  --line: #e7e1d4;
-  --accent: #f5b700;
-  --accent-ink: #1f1d1a;
-  --link: #8a5a00;
-  color-scheme: light dark;
+  --paper: #ffffff;
+  --grid: #eef1f5;
+  --ink: #191f2c;
+  --muted: #535d70;
+  --line: #dce1ea;
+  --x: #aab2c0;
+  --guide: #7d8698; /* 5칸 기준선. 노랑·남색·흰 칸 어디서나 보인다 */
+  --fill-y: #ffc93c;
+  --text-y: #8a5a00;
+  --text-b: #3e63dd;
+  --text-k: #8a5c36;
+  --cell: 24px;
+  --display: 'Galmuri11', 'Apple SD Gothic Neo', sans-serif;
+  --body: system-ui, -apple-system, 'Apple SD Gothic Neo', 'Pretendard', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #16150f;
-    --card: #1f1e18;
-    --ink: #f3efe6;
-    --muted: #a39d92;
-    --line: #2e2c26;
-    --link: #f5c542;
+    --paper: #11141b;
+    --grid: #1a1f2a;
+    --ink: #e8ebf2;
+    --muted: #a5adbc;
+    --line: #2c3341;
+    --x: #4d5566;
+    --guide: #6f788b;
+    --text-y: #ffc93c;
+    --text-b: #93a9ff;
+    --text-k: #d6a67c;
+    color-scheme: dark;
   }
 }
 
@@ -27,77 +49,235 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
+  background-color: var(--paper);
+  /* 문제지 모눈. 줄을 화면 가운데에 맞춰 .wrap 가장자리와 겹치게 한다 */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: var(--cell) var(--cell);
+  background-position: calc(50% + 12px) 0;
+  font-family: var(--body);
+  font-size: 17px;
   line-height: 1.7;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
 
-a { color: var(--link); }
+::selection { background: var(--fill-y); color: #191f2c; }
 
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: var(--fill-y); }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+.wrap { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+
+.skip { position: absolute; left: 16px; top: -100px; background: var(--fill-y); color: #191f2c; padding: 8px 16px; font-family: var(--display); z-index: 10; }
+.skip:focus { top: 12px; }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: 0; margin: 0; }
 
 /* 머리글 */
-header { border-bottom: 1px solid var(--line); }
-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: 0.08em; }
-.brand svg { width: 26px; height: 26px; flex: none; }
-nav { display: flex; align-items: center; gap: 14px; font-size: 15px; }
-nav a { color: var(--muted); text-decoration: none; }
-nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
-nav .lang { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+.head { border-bottom: 3px solid var(--ink); background: var(--paper); }
+.head .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: var(--display); font-size: 22px; }
+.brand svg { width: 24px; height: 24px; flex: none; }
+.nav { display: flex; }
+.nav a {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 16px;
+  border: 2px solid var(--ink); margin-left: -2px;
+  font-family: var(--display); font-size: 22px; color: var(--ink); text-decoration: none;
+  transition: background-color .15s ease-out;
+}
+.nav a:hover { background: var(--fill-y); color: #191f2c; }
+.nav a[aria-current="page"] { background: var(--ink); color: var(--paper); }
 
-main { padding: 48px 0 64px; }
+/* 버튼: 격자 칸 */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 24px;
+  border: 3px solid var(--ink); background: var(--paper); color: var(--ink);
+  font-family: var(--display); font-size: 22px; text-decoration: none;
+  transition: background-color .15s ease-out, color .15s ease-out;
+}
+.btn.primary { background: var(--fill-y); color: #191f2c; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn svg { width: 22px; height: 22px; flex: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .nav a, .mail-cell { transition: background-color .15s ease-out, color .15s ease-out, transform .18s cubic-bezier(.34, 1.56, .64, 1); }
+  .btn:active, .nav a:active, .mail-cell:active { transform: scale(1.03, .92); transition-duration: .06s; }
+}
 
-h1 { font-size: 32px; line-height: 1.3; margin: 0 0 12px; letter-spacing: -0.01em; }
-h2 { font-size: 20px; line-height: 1.4; margin: 40px 0 12px; }
-h3 { font-size: 17px; margin: 24px 0 8px; }
-p, ul, ol { margin: 0 0 14px; }
-li { margin-bottom: 4px; }
-.lead { font-size: 18px; color: var(--muted); margin-bottom: 32px; }
+/* 첫 화면 */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 72px; padding-block: 72px 96px; }
+.hero h1 { font-size: 66px; line-height: 1.27; }
+.lead { font-size: 20px; color: var(--muted); max-width: 30em; margin: 24px 0 0; }
+
+/* 네모로직 격자 (puzzle.js가 채운다) */
+.puzzle {
+  --size: 30px;
+  display: grid;
+  /* 칸 영역은 테두리 3px 양쪽만큼 넓다. 힌트 줄은 같은 3px만큼 안쪽에서 시작해 칸과 줄을 맞춘다 */
+  grid-template-columns: auto calc(var(--cols) * var(--size) + 6px);
+  grid-template-rows: auto calc(var(--rows) * var(--size) + 6px);
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ink);
+}
+.puzzle:not(.ready) { min-height: calc(var(--rows) * var(--size) + 96px); }
+.pz-corner { display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 10px 8px 0; font-size: 11px; color: var(--muted); }
+.pz-top { display: grid; grid-template-columns: repeat(var(--cols), var(--size)); align-items: stretch; padding: 0 3px; }
+.pz-top span { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; padding: 8px 0 6px; background: var(--grid); border-left: 1px solid var(--line); }
+.pz-left { display: grid; grid-template-rows: repeat(var(--rows), var(--size)); padding: 3px 0; }
+.pz-left span { display: flex; gap: .45em; justify-content: flex-end; align-items: center; padding: 0 8px 0 10px; background: var(--grid); border-top: 1px solid var(--line); }
+.pz-top b, .pz-left b { font-weight: 700; }
+.pz-cells { display: grid; grid-template-columns: repeat(var(--cols), var(--size)); border: 3px solid var(--ink); background: var(--paper); }
+.pz-cells i { position: relative; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pz-cells i.r5 { border-right: 2px solid var(--guide); }
+.pz-cells i.b5 { border-bottom: 2px solid var(--guide); }
+.pz-cells i.f::before { content: ''; position: absolute; inset: 0; background: var(--c); }
+.pz-cells i.x::before {
+  content: ''; position: absolute; inset: 26%;
+  background:
+    linear-gradient(45deg, transparent calc(50% - 1px), var(--x) calc(50% - 1px), var(--x) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(-45deg, transparent calc(50% - 1px), var(--x) calc(50% - 1px), var(--x) calc(50% + 1px), transparent calc(50% + 1px));
+}
+/* 첫 화면의 순간: 격자가 화면에 들어오면 칸이 대각선 방향으로 차례로 칠해진다(puzzle.js가 wait → play).
+   칠한 상태가 기본이고, 움직임 줄이기에서는 wait를 붙이지 않는다 */
+.puzzle.wait .pz-cells i::before { opacity: 0; }
+.puzzle.play .pz-cells i.f::before { animation: pz-fill .32s cubic-bezier(.16, 1, .3, 1) var(--d) both; }
+.puzzle.play .pz-cells i.x::before { animation: pz-x .3s ease-out calc(var(--d) + 120ms) both; }
+@keyframes pz-fill { from { transform: scale(.15); opacity: 0; } }
+@keyframes pz-x { from { opacity: 0; } }
+
+/* 섹션 */
+.section { padding: 72px 0; border-top: 3px solid var(--ink); }
+.section > .wrap > h2 { font-size: 44px; line-height: 1.3; margin-bottom: 36px; }
+
+/* 게임: 문제마다 번호와 상태 띠 */
+.games { display: grid; gap: 24px; }
+.game { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border: 3px solid var(--ink); background: var(--paper); }
+.game-info { padding: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.game-info h3 { font-size: 44px; line-height: 1.2; }
+.game-info h3 .no { color: var(--text-y); }
+.game.dim h3 .no { color: var(--muted); }
+.game-info p { margin: 0; max-width: 32em; }
+.game-info .more { margin-top: auto; padding-top: 8px; }
+.facts .tag, .tag {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 36px; padding: 0 12px;
+  border: 2px solid var(--ink); background: var(--fill-y); color: #191f2c;
+  font-family: var(--display); font-size: 22px; line-height: 1;
+}
+.tag.soon { background: transparent; color: var(--muted); border-color: var(--x); border-style: dashed; }
+.game-art { border-left: 3px solid var(--ink); display: grid; place-items: center; padding: 36px 24px; background: var(--grid); }
+.game.dim { border-color: var(--x); border-style: dashed; }
+.game.dim .game-art { border-left: 3px dashed var(--x); background: transparent; }
+.game.dim h3 { color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.facts li { display: inline-flex; align-items: center; min-height: 36px; border: 2px solid var(--line); padding: 0 10px; font-size: 15px; color: var(--muted); }
+.shot-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%; }
+.game.feature { grid-template-columns: minmax(0, 1fr); }
+.game.feature .game-art { border-left: 0; border-top: 3px solid var(--ink); padding: 36px; }
+.game.feature .shot-strip { max-width: 960px; }
+.shot-strip img { width: 100%; height: auto; display: block; border: 3px solid var(--ink); }
+.game-icon { width: 96px; height: 96px; border: 3px solid var(--ink); display: block; }
+
+/* 문의 */
+.mail-cell {
+  display: inline-flex; align-items: center; gap: 16px; padding: 18px 24px; border: 3px solid var(--ink); background: var(--paper);
+  font-family: var(--display); font-size: 33px; line-height: 1.2; color: var(--ink); text-decoration: none;
+  transition: background-color .15s ease-out;
+}
+.mail-cell:hover { background: var(--fill-y); color: #191f2c; }
+.mail-cell svg { width: 33px; height: 33px; flex: none; }
+.note { color: var(--muted); margin: 16px 0 0; }
+
+/* 바닥글: 퍼즐 잡지의 판권란 */
+.foot { border-top: 3px solid var(--ink); background: var(--paper); padding: 48px 0 60px; font-size: 15px; }
+.foot .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; }
+.colophon { display: grid; grid-template-columns: max-content minmax(0, 1fr); margin: 0; border-top: 2px solid var(--ink); }
+.colophon dt, .colophon dd { margin: 0; padding: 8px 16px 8px 0; border-bottom: 1px solid var(--line); }
+.colophon dt { color: var(--muted); font-family: var(--display); font-size: 11px; line-height: 2.4; padding-right: 24px; }
+.foot-links { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.foot-links p { margin: 8px 0 0; color: var(--muted); }
+
+/* 게임 페이지 */
+.game-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 72px; padding-block: 72px 96px; }
+.game-hero .title { display: flex; align-items: center; gap: 24px; margin: 24px 0; }
+.game-hero h1 { font-size: 66px; line-height: 1.2; }
+.game-hero .puzzle { --size: 40px; }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0; }
+.shots img { width: 100%; height: auto; display: block; border: 3px solid var(--ink); background: var(--paper); }
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; gap: 12px; max-width: 46em; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; }
+.steps li::before {
+  content: counter(step); display: grid; place-items: center; width: 48px; height: 48px;
+  border: 3px solid var(--ink); background: var(--fill-y); color: #191f2c; font-family: var(--display); font-size: 22px;
+}
+.steps li p { margin: 10px 0 0; }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 72px; }
+.cols h2 { font-size: 33px; line-height: 1.3; margin-bottom: 24px; }
+.ticks { list-style: none; padding: 0; margin: 0; }
+.ticks li { position: relative; padding-left: 32px; margin-bottom: 12px; }
+.ticks li::before { content: ''; position: absolute; left: 0; top: .45em; width: 16px; height: 16px; background: var(--fill-y); border: 2px solid var(--ink); }
+
+/* 문서(개인정보처리방침, 문의) */
+.doc { padding: 72px 0 96px; }
+.doc .wrap > * { max-width: 760px; }
+.doc h1 { font-size: 44px; line-height: 1.3; margin-bottom: 24px; }
+.doc h2 { font-size: 22px; line-height: 1.5; margin: 48px 0 16px; padding-top: 16px; border-top: 2px solid var(--ink); }
+.doc h3 { font-size: 22px; line-height: 1.5; margin: 24px 0 8px; }
+.doc p, .doc ul, .doc ol { margin: 0 0 16px; }
+.doc li { margin-bottom: 6px; }
+.doc .lead { margin: 0 0 32px; }
 .muted { color: var(--muted); }
-.small { font-size: 14px; }
-
-/* 게임 카드 */
-.card {
-  display: flex; align-items: center; gap: 16px;
-  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
-  padding: 16px; color: var(--ink); text-decoration: none;
-}
-.card:hover { border-color: var(--accent); }
-.card img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
-.card strong { display: block; font-size: 18px; }
-.card span { color: var(--muted); font-size: 15px; }
-
-.game-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-.game-head img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
-.game-head h1 { margin: 0; }
-
-.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
-.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; }
-
-.badge { display: inline-block; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
-
-.box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 16px 0; }
-.mail { font-size: 20px; font-weight: 700; }
-
-/* 개인정보처리방침 표 */
-.table-scroll { overflow-x: auto; margin: 0 0 14px; }
-table { border-collapse: collapse; width: 100%; font-size: 15px; }
-th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
-th { background: var(--card); }
-
-/* 바닥글 */
-footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 13px; color: var(--muted); }
-footer p { margin: 0 0 4px; }
-
-@media (max-width: 480px) {
-  h1 { font-size: 26px; }
-  .shots { gap: 8px; }
-  nav { gap: 10px; font-size: 14px; }
-}
-
+.box { border: 3px solid var(--ink); background: var(--paper); padding: 20px 24px; margin: 24px 0; }
+.box > :last-child { margin-bottom: 0; }
+.box strong:first-child { font-family: var(--display); font-weight: 700; font-size: 22px; }
+.table-scroll { overflow-x: auto; margin: 0 0 16px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; border: 3px solid var(--ink); }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--grid); font-weight: 700; }
 .nowrap { white-space: nowrap; }
+
+@media (max-width: 960px) {
+  .hero, .game-hero { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-block: 48px 72px; }
+  .hero .puzzle, .game-hero .puzzle { justify-self: center; }
+  .game, .game.feature { grid-template-columns: minmax(0, 1fr); }
+  .game-art { border-left: 0; border-top: 3px solid var(--ink); }
+  .game.dim .game-art { border-left: 0; border-top: 3px dashed var(--x); }
+  .foot .wrap { grid-template-columns: minmax(0, 1fr); }
+  .cols { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .head .wrap { min-height: 64px; }
+  .nav a { min-height: 44px; padding: 0 12px; }
+  .hero h1, .game-hero h1 { font-size: 44px; line-height: 1.3; }
+  .lead { font-size: 17px; }
+  .actions { gap: 8px; margin-top: 28px; }
+  .btn { min-height: 56px; padding: 0 14px; gap: 8px; }
+  .hero { gap: 36px; padding-block: 36px 60px; }
+  .shot-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; padding-bottom: 8px; }
+  .game.feature .shot-strip img { flex: 0 0 62%; width: 62%; scroll-snap-align: start; }
+  .game.feature .game-art { padding: 16px; }
+  .box { padding: 16px; }
+  .puzzle { --size: 18px; font-size: 11px; }
+  .game-hero .puzzle { --size: 30px; font-size: 22px; }
+  .pz-top { padding-bottom: 6px; }
+  .pz-left { padding-right: 6px; }
+  .section { padding: 48px 0; }
+  .section > .wrap > h2 { font-size: 33px; margin-bottom: 24px; }
+  .game-info { padding: 24px; }
+  .game-info h3 { font-size: 33px; }
+  .game-art { padding: 24px 16px; }
+  .mail-cell { font-size: 22px; padding: 12px; gap: 10px; max-width: 100%; }
+  .mail-cell svg { width: 22px; height: 22px; }
+  .shots { gap: 8px; }
+  .shots img, .shot-strip img { border-width: 2px; }
+  .doc { padding: 48px 0 72px; }
+  .doc h1 { font-size: 33px; }
+}
+.small { font-size: 15px; }

@@ -5,59 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>픽셀 벨트 · 도이플레이트</title>
 <meta name="description" content="벨트에 캐릭터를 태워 보내 픽셀 그림의 큐브를 같은 색끼리 지우는 퍼즐 게임이에요.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11141b" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/pixel-belt/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/pixel-belt/">
+<link rel="preload" href="/fonts/Galmuri11-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
+<script src="/puzzle.js" defer></script>
 </head>
 <body>
-<header><div class="wrap">
-  <a class="brand" href="/"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg>DOHYPLATE</a>
-  <nav><a href="/pixel-belt/" aria-current="page">게임</a><a href="/support/">문의</a><a class="lang" href="/en/pixel-belt/" lang="en">EN</a></nav>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="head"><div class="wrap">
+  <a class="brand" href="/" aria-label="DOHYPLATE"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg><span>DOHYPLATE</span></a>
+  <nav class="nav" aria-label="주 메뉴"><a href="/#games" aria-current="page">게임</a><a href="/support/">문의</a><a href="/en/pixel-belt/" lang="en">EN</a></nav>
 </div></header>
 
-<main><div class="wrap">
-  <div class="game-head">
-    <img src="/img/logo-c.png" alt="픽셀 벨트 아이콘" width="88" height="88">
-    <div>
+<main id="main">
+<div class="wrap game-hero">
+  <div>
+    <div class="title">
+      <img class="game-icon" src="/img/logo-c.png" alt="픽셀 벨트 아이콘" width="96" height="96">
       <h1>픽셀 벨트</h1>
-      <p class="muted" style="margin:0">벨트로 색을 지우는 픽셀 퍼즐</p>
     </div>
+    <p class="lead">벨트로 색을 지우는 픽셀 퍼즐</p>
+    <p>컨베이어 벨트에 캐릭터를 태워 보내, 픽셀 그림의 큐브를 같은 색끼리 지우는 퍼즐 게임이에요.</p>
+    <ul class="facts"><li class="tag">출시 준비 중</li><li>20개 지역</li><li>300개 그림</li><li>토스 · App&nbsp;Store · Google&nbsp;Play · 원스토어</li></ul>
   </div>
-  <p><span class="badge">출시 준비 중</span></p>
-  <p>컨베이어 벨트에 캐릭터를 태워 보내, 픽셀 그림의 큐브를 같은 색끼리 지우는 퍼즐 게임이에요.</p>
+  <div class="puzzle" aria-hidden="true" style="--cols:8;--rows:8" data-art="..DDDD.. .DWWWWD. .DWBWBD. .DWWWWD. ..DDDD.. .KKKKKK. .KYKYKY. ..D..D.."></div>
+</div>
 
-  <div class="shots">
-    <img src="/img/screenshot-1.png" alt="플레이 화면: 탭해서 벨트에 태우면 같은 색 큐브를 쏴서 지워요" width="636" height="1048">
-    <img src="/img/screenshot-2.png" alt="지도 화면: 그림을 완성할 때마다 색을 잃은 섬에 색이 돌아와요" width="636" height="1048">
-    <img src="/img/screenshot-3.png" alt="클리어 화면: 20개 지역, 300개 그림을 하나씩 모아 보세요" width="636" height="1048">
+<section class="section" aria-labelledby="shots-h"><div class="wrap">
+  <h2 id="shots-h">게임 화면</h2>
+  <div class="shots"><img src="/img/screenshot-1.png" alt="플레이 화면: 탭해서 벨트에 태우면 같은 색 큐브를 쏴서 지워요" width="636" height="1048" loading="lazy"><img src="/img/screenshot-2.png" alt="지도 화면: 그림을 완성할 때마다 색을 잃은 섬에 색이 돌아와요" width="636" height="1048" loading="lazy"><img src="/img/screenshot-3.png" alt="클리어 화면: 20개 지역, 300개 그림을 하나씩 모아 보세요" width="636" height="1048" loading="lazy"></div>
+  
+</div></section>
+
+<section class="section"><div class="wrap cols">
+  <div>
+    <h2>이렇게 플레이해요</h2>
+    <ol class="steps"><li><p>대기열 맨 앞 캐릭터를 탭하면 그림 둘레의 벨트에 올라가요.</p></li><li><p>캐릭터는 벨트를 돌며, 가장 바깥 큐브가 자기 색이면 쏴서 지워요.</p></li><li><p>탄이 남은 캐릭터는 대기 슬롯으로 돌아와요. 슬롯이 가득 찬 채로 또 돌아오면 실패예요.</p></li></ol>
   </div>
+  <div>
+    <h2>그림을 완성하면</h2>
+    <ul class="ticks"><li>색을 잃은 섬에 색이 돌아오고, 색 조각을 받아요.</li><li>모은 그림은 도감에서 다시 볼 수 있어요.</li><li>20개 지역, 300개 그림. 지역마다 새 규칙이 나와요.</li></ul>
+  </div>
+</div></section>
 
-  <h2>이렇게 플레이해요</h2>
-  <ol>
-    <li>대기열 맨 앞 캐릭터를 탭하면 그림 둘레의 벨트에 올라가요.</li>
-    <li>캐릭터는 벨트를 돌며, 가장 바깥 큐브가 자기 색이면 쏴서 지워요.</li>
-    <li>탄이 남은 캐릭터는 대기 슬롯으로 돌아와요. 슬롯이 가득 찬 채로 또 돌아오면 실패예요.</li>
-  </ol>
-
-  <h2>그림을 완성하면</h2>
-  <ul>
-    <li>색을 잃은 섬에 색이 돌아오고, 색 조각을 받아요.</li>
-    <li>모은 그림은 도감에서 다시 볼 수 있어요.</li>
-    <li>20개 지역, 300개 그림. 지역마다 새 규칙이 나와요.</li>
-  </ul>
-
-  <h2>안내</h2>
-  <ul>
+<section class="section" aria-labelledby="info-h"><div class="wrap">
+  <h2 id="info-h">안내</h2>
+  <ul class="ticks">
     <li><a href="/pixel-belt/privacy/">개인정보처리방침</a></li>
     <li><a href="/support/">고객 문의</a></li>
   </ul>
-</div></main>
+</div></section>
+</main>
 
-<footer><div class="wrap">
-  <p>도이플레이트(DOHYPLATE) · 대표 김도형 · 사업자등록번호 <span class="nowrap">794-13-02501</span></p>
-  <p>문의 <a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></p>
-  <p>© 2026 DOHYPLATE</p>
+<footer class="foot"><div class="wrap">
+  <dl class="colophon">
+    <dt>상호</dt><dd>도이플레이트 (DOHYPLATE)</dd>
+    <dt>대표</dt><dd>김도형</dd>
+    <dt>사업자등록번호</dt><dd><span class="nowrap">794-13-02501</span></dd>
+    <dt>메일</dt><dd><a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></dd>
+  </dl>
+  <div class="foot-links">
+    <a href="/pixel-belt/privacy/">픽셀 벨트 개인정보처리방침</a>
+    <a href="/support/">고객 문의</a>
+    <p>© 2026 DOHYPLATE</p>
+  </div>
 </div></footer>
 </body>
 </html>

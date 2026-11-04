@@ -35,14 +35,15 @@
 <main id="main">
 <div class="doc"><div class="wrap">
   <h1>Pixel Belt Privacy Policy</h1>
-  <p class="muted">Effective date: November 4, 2026</p>
+  <p class="muted">Effective date: November 12, 2026</p>
+  <div class="box"><strong>Notice of change (posted November 5, 2026)</strong><br>We add a friend invite event to the Toss version. For users who use friend invites, we keep invite records on our server. The changes are in the summary, sections 1 to 8, and section 10. This policy takes effect on November 12, 2026. Until then, the <a href="/en/pixel-belt/privacy/2026-11-04/">previous policy (effective November 4, 2026)</a> applies.</div>
 
   <p>DOHYPLATE ("we") publishes this policy under Article 30 of the Personal Information Protection Act of the Republic of Korea. This policy applies to the game "Pixel Belt" ("the game"). This English text is a translation. If the English and Korean texts are different, the <a href="/pixel-belt/privacy/">Korean text</a> applies.</p>
 
   <div class="box">
     <strong>Summary</strong>
     <ul style="margin:8px 0 0">
-      <li>We do not operate a server. We do not receive or keep your personal information.</li>
+      <li>We keep only the invite records of users who use friend invites on our server. We do not receive personal information such as your name or contact details.</li>
       <li>The game keeps your progress only on your device.</li>
       <li>Each platform processes payments, ads, leaderboards, and usage statistics directly.</li>
     </ul>
@@ -63,6 +64,8 @@
     <tr><td>Leaderboard score (number of collected pictures)</td><td>Toss Game Center</td><td>Show rankings</td><td>Toss</td></tr>
     <tr><td>Game usage events (level start, clear, and fail; shop open; payment start, success, and fail; ad reward)</td><td>Toss analytics</td><td>Improve the game</td><td>Toss</td></tr>
     <tr><td>Ad view information</td><td>Toss ads</td><td>Show rewarded ads</td><td>Toss</td></tr>
+    <tr><td>Game user key from Toss, invite code, invite relation (who invited whom), time the tutorial was finished, Toss Points payment records (amount, time, result)</td><td>Our server (Supabase)</td><td>Pay friend invite rewards, prevent duplicate or fraudulent entries, answer payment questions</td><td>Toss (when you use friend invites)</td></tr>
+    <tr><td>Server access logs (IP address, time)</td><td>Our server (Supabase)</td><td>Security and error checks</td><td>Toss (when you use friend invites)</td></tr>
     <tr><td>Advertising ID (on Android, also the app set ID), device information (device model, OS version, IP address), approximate location estimated from the IP address, app use information (app launches, taps, ad interactions), diagnostic information (performance, crashes)</td><td>Google AdMob</td><td>Show and measure ads, analytics, fraud prevention</td><td>App</td></tr>
   </table></div>
   <p>We do not collect your name, phone number, email, location, contacts, or photos. We do not receive card information. Toss, Apple, Google, and ONE store process payments.</p>
@@ -71,22 +74,36 @@
   <ul>
     <li>When you delete the app, the progress on your device is deleted. In the Toss version, the Toss app storage policy applies.</li>
     <li>Each platform keeps the information it processes under its own privacy policy.</li>
+    <li>We keep invite records and Toss Points payment records on our server for 1 year after the friend invite event ends, and then delete them. We keep them to answer payment questions.</li>
+    <li>Supabase keeps server access logs for up to 7 days and then deletes them.</li>
   </ul>
 
   <h2>3. Third parties</h2>
-  <p>We do not give your personal information to third parties. The companies below process information directly under their terms with you.</p>
+  <p>We do not give your personal information to third parties. But when we pay a friend invite reward, we send the game user key and the amount to Viva Republica Inc. (Toss). Toss issued this key.</p>
+  <p>The companies below process information directly under their terms with you.</p>
   <ul>
-    <li>Viva Republica Inc. (Toss): payments, ads, leaderboard, and usage statistics in the Toss version</li>
+    <li>Viva Republica Inc. (Toss): payments, ads, leaderboard, usage statistics, and Toss Points payments in the Toss version</li>
     <li>Apple Inc.: App Store payments</li>
     <li>Google LLC: Google Play payments and AdMob ads</li>
     <li>ONE store Co., Ltd.: ONE store payments</li>
   </ul>
 
   <h2>4. Outsourcing</h2>
-  <p>We do not outsource the processing of personal information.</p>
+  <div class="table-scroll"><table>
+    <tr><th>Recipient</th><th>Task</th></tr>
+    <tr><td>Supabase Inc.</td><td>Operate the friend invite server and database</td></tr>
+  </table></div>
 
   <h2>5. Transfer outside Korea</h2>
-  <p>In the app version, Google AdMob processes ad information in the United States.</p>
+  <p>In the Toss version, we keep friend invite records on a server that Supabase operates. In the app version, Google AdMob processes ad information in the United States.</p>
+  <div class="table-scroll"><table>
+    <tr><th>Recipient</th><td>Supabase Inc. (United States). Contact: <a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
+    <tr><th>Information</th><td>Game user key, invite code, invite relation, time the tutorial was finished, Toss Points payment records, server access logs (IP address, time)</td></tr>
+    <tr><th>When and how</th><td>Sent over the network when you open the friend invite sheet, when you first enter through an invite link, and when you finish the tutorial. The data is stored in the Seoul region (Republic of Korea). Supabase, a United States company, operates the server.</td></tr>
+    <tr><th>Purpose</th><td>Operate the friend invite server and database</td></tr>
+    <tr><th>Retention</th><td>As in section 2</td></tr>
+    <tr><th>How to refuse</th><td>If you do not use friend invites, nothing is sent. You can play the game if you refuse.</td></tr>
+  </table></div>
   <div class="table-scroll"><table>
     <tr><th>Recipient</th><td>Google LLC (United States). Contact: <a href="https://support.google.com/policies">support.google.com/policies</a></td></tr>
     <tr><th>Information</th><td>Advertising ID (on Android, also the app set ID), device information (device model, OS version, IP address), approximate location estimated from the IP address, app use information (app launches, taps, ad interactions), diagnostic information (performance, crashes)</td></tr>
@@ -98,24 +115,31 @@
   <p>In regions where the law requires consent for ads (the European Economic Area, the United Kingdom, Switzerland), the game shows the Google consent form before it loads an ad. On iPhone, the game shows the app tracking request before it loads an ad.</p>
 
   <h2>6. Deletion</h2>
-  <p>We do not keep personal information. When you delete the app, the operating system deletes the data on your device.</p>
+  <p>When the retention period in section 2 ends, our server deletes the invite records automatically every day. Deleted records cannot be restored. When you delete the app, the operating system deletes the data on your device.</p>
 
   <h2>7. Your rights</h2>
   <p>You can ask to see, correct, delete, or stop the processing of your personal information.</p>
   <ul>
     <li>To delete the progress on your device, delete the app.</li>
     <li>For information that a platform processes, contact that platform.</li>
+    <li>To delete your friend invite records, email us the "My invite code" from the friend invite sheet. We delete the records for that code.</li>
     <li>For other requests, email the privacy officer below. We reply within 10 days.</li>
   </ul>
 
   <h2>8. Security</h2>
-  <p>We do not operate a server or a database. The operating system and the Toss app keep the progress in storage that is separate for each app.</p>
+  <ul>
+    <li>Access rules (RLS) stop the app from reading or writing the tables on our server directly. Only server functions use the tables, with a secret key.</li>
+    <li>We keep the secret key and the Toss certificate only on the server.</li>
+    <li>All transfers use HTTPS encryption.</li>
+    <li>Only the representative has server admin access.</li>
+    <li>The operating system and the Toss app keep the progress in storage that is separate for each app.</li>
+  </ul>
 
   <h2>9. Automatic collection</h2>
   <p>The game does not use cookies. The app version uses the advertising ID for ads. To refuse, see section 5.</p>
 
   <h2>10. Children</h2>
-  <p>We do not directly collect personal information from any user, including children. In the app version, the ad SDK processes the information in section 1. A parent can ask for deletion of a child's information. Section 7 tells how.</p>
+  <p>The only information we process directly is friend invite records. We do not receive the name or contact details of any user, including children. In the app version, the ad SDK processes the information in section 1. A parent can ask for deletion of a child's information. Section 7 tells how.</p>
 
   <h2>11. Privacy officer</h2>
   <ul>
@@ -134,7 +158,7 @@
 
   <h2>13. Changes to this policy</h2>
   <p>If we change this policy, we post the change on this page 7 days before it takes effect. For an important change to your rights, we post it 30 days before.</p>
-  <p class="muted small">Effective date: November 4, 2026</p>
+  <p class="muted small">Effective date: November 12, 2026</p>
 </div></div>
 </main>
 

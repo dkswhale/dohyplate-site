@@ -233,6 +233,7 @@ if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelect
     if (still) {
       // 움직임 줄이기: 큐브 몇 개를 지운 한 장면에 멈춘다
       for (let t = 0; t < 2400; t += 16) step(t, 16);
+      pops = []; // 지우는 중인 큐브 효과는 시간이 흘러야 줄어든다. 멈춘 장면에서는 빼야 큐브가 크게 그려지지 않는다
       draw(0);
       return;
     }

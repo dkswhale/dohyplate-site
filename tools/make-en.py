@@ -73,6 +73,11 @@ def make(src, dst, ko_path):
         if url.startswith(ASSETS) or url.startswith('/en/') or 'lang="ko"' in m.group(0): return m.group(0)
         return m.group(0).replace(f'href="{url}"', f'href="/en{url}"')
     s = re.sub(r'<a [^>]*href="(/[^"]*)"[^>]*>', fix, s)
+    # 공유 정보: 대표 주소와 og:url은 영어 주소로, 언어는 en_US로
+    en_url = 'https://dohyplate.com/en' + ko_path
+    s = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + en_url + m.group(2), s)
+    s = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + en_url + m.group(2), s)
+    s = s.replace('<meta property="og:locale" content="ko_KR">', '<meta property="og:locale" content="en_US">')
     # 글: 글 조각(태그 사이 글, 속성 값)을 통째로 사전에서 찾아 바꾼다
     def sub(m):
         t = m.group(1) if m.group(1) is not None else m.group(2)

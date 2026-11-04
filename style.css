@@ -272,3 +272,13 @@ html { scroll-padding-top: 72px; }
 @keyframes cue { 50% { transform: translateY(5px); } }
 @media (prefers-reduced-motion: reduce) { .scroll-cue svg { animation: none; } }
 @media (max-height: 700px) { .scroll-cue { display: none; } }
+
+/* 404: 길을 잃은 벨티 */
+.lost { min-height: calc(100svh - 72px); display: grid; place-items: center; text-align: center; padding-block: 40px; }
+.lost .wrap { display: grid; justify-items: center; gap: 10px; }
+.lost-belty { width: 128px; height: 128px; image-rendering: pixelated; animation: lost 2.4s ease-in-out infinite; }
+@keyframes lost { 50% { transform: translateY(-8px) rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) { .lost-belty { animation: none; } }
+.lost-code { font-weight: 800; font-size: 15px; letter-spacing: 0.2em; color: var(--yellow-text); }
+.lost h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; }
+.lost .actions { margin-top: 18px; justify-content: center; }

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 공유 미리보기 그림(1200×630)과 아이콘을 만드는 화면. tools/make-images.mjs가 찍는다. 사이트에 나가지 않는다(_config.yml exclude) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/style.css">
+<style>
+html, body { margin: 0; scroll-snap-type: none; }
+.og { width: 1200px; height: 630px; position: relative; overflow: hidden; display: grid; grid-template-columns: 470px 1fr; align-items: center; gap: 36px; padding: 0 56px; box-sizing: border-box; background: #1d2233; color: #fff; }
+.og::before { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' width='56' height='56'%3E%3Crect width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3Crect x='4' y='4' width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3C/svg%3E"); }
+.og > * { position: relative; }
+.og .mark { width: 84px; height: 84px; }
+.og h1 { font-size: 60px; white-space: nowrap; letter-spacing: 0.06em; font-weight: 800; margin: 22px 0 10px; }
+.og p { font-size: 26px; color: #c3c9d6; margin: 0; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tile { border-radius: 26px; overflow: hidden; aspect-ratio: 1 / 1.08; position: relative; }
+.tile.pb { background-color: var(--peach); background-image: radial-gradient(var(--peach-dot) 1.4px, transparent 1.6px); background-size: 18px 18px; display: grid; place-items: center; }
+.tile.pb canvas { width: 92%; aspect-ratio: 1; }
+.tile.ke img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tile b { position: absolute; left: 14px; bottom: 14px; background: #fff; color: var(--ink); font-size: 20px; padding: 6px 14px; border-radius: 14px; }
+.og.game { grid-template-columns: 1fr 520px; background-color: var(--peach); background-image: radial-gradient(var(--peach-dot) 1.4px, transparent 1.6px); background-size: 18px 18px; color: var(--ink); }
+.og.game::before { display: none; }
+.og.game .icon { width: 120px; height: 120px; border-radius: 30px; box-shadow: 0 10px 24px -10px rgba(25,31,44,.4); }
+.og.game h1 { letter-spacing: -0.02em; font-size: 76px; }
+.og.game p { color: #3C4456; }
+.og.game canvas { width: 520px; height: 520px; }
+.icon180 { width: 180px; height: 180px; background: #1d2233; display: grid; place-items: center; }
+.icon180 svg { width: 104px; height: 104px; }
+.belty { width: 256px; height: 256px; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<div class="og" id="og-home">
+  <div><svg class="mark" viewBox="0 0 7 7"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="#fff"/><rect y="4" width="3" height="3" fill="#fff"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg>
+    <h1>DOHYPLATE</h1><p>모바일 게임 스튜디오</p></div>
+  <div class="tiles">
+    <div class="tile pb"><canvas data-scene="0"></canvas><b>픽셀 벨트</b></div>
+    <div class="tile ke"><img src="/img/clockout-run.webp" alt=""><b>퇴근 탈출</b></div>
+  </div>
+</div>
+<div class="og game" id="og-pb">
+  <div><img class="icon" src="/img/logo-c.png" alt=""><h1>픽셀 벨트</h1><p>벨트로 색을 지우는 픽셀 퍼즐</p></div>
+  <canvas data-scene="4"></canvas>
+</div>
+<div class="icon180" id="touch"><svg viewBox="0 0 7 7"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="#fff"/><rect y="4" width="3" height="3" fill="#fff"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg></div>
+<canvas class="belty" id="belty" width="8" height="8"></canvas>
+<script>
+fetch('/art.json').then(r => r.json()).then(a => { const g = document.getElementById('belty').getContext('2d'); a.belty.forEach((row, y) => [...row].forEach((ch, x) => { if (ch !== '.') { g.fillStyle = a.palette[ch]; g.fillRect(x, y, 1, 1); } })); document.body.dataset.ready = '1'; });
+</script>
+<script src="/site.js"></script>
+</body>
+</html>

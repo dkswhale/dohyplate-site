@@ -194,9 +194,6 @@ tr:last-child th, tr:last-child td { border-bottom: 0; }
 .colophon { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 18px; margin: 0; }
 .colophon dt { font-weight: 700; color: var(--ink); }
 .colophon dd { margin: 0; }
-.foot-links { display: grid; gap: 6px; justify-items: end; align-content: start; }
-.foot-links a { color: var(--ink); font-weight: 600; }
-.foot-links p { margin-top: 8px; }
 
 @media (max-width: 860px) {
   .co-copy { text-align: left; margin-bottom: 24px; }
@@ -213,8 +210,7 @@ tr:last-child th, tr:last-child td { border-bottom: 0; }
   .contact { grid-template-columns: 1fr; padding: 32px 24px; }
   .section { padding-block: 64px; }
   .foot .wrap { grid-template-columns: 1fr; }
-  .foot-links { justify-items: start; }
-}
+  }
 @media (max-width: 480px) {
   .nav { gap: 0; font-size: 14px; }
   .nav a { padding: 8px 7px; }
@@ -236,7 +232,6 @@ tr:last-child th, tr:last-child td { border-bottom: 0; }
 
 /* 한 화면씩: 첫 화면과 게임 띠는 화면 높이를 꽉 채우고, 스크롤을 멈추면 가까운 구역 시작에 맞춘다(억지로 끌지 않는 proximity) */
 html { scroll-snap-type: y proximity; }
-.head.dark, .band { scroll-snap-align: start; }
 .co-hero { min-height: calc(100svh - 72px); display: flex; align-items: center; margin-bottom: 0; padding-block: 24px 56px; }
 .co-hero > .wrap { width: 100%; }
 .co-hero .worlds { margin-bottom: 0; }
@@ -264,8 +259,9 @@ html { scroll-padding-top: 72px; }
 .head.dark { background: #1d2233; }
 .head.scrolled { box-shadow: 0 6px 18px -10px rgba(25, 31, 44, 0.45); }
 .band { min-height: calc(100svh - 72px); }
-.head.dark, .band { scroll-snap-align: start; }
-.co-hero { scroll-snap-align: none; }
+/* 위에 붙는 머리글은 맞춤 기준이 될 수 없다(붙어 있는 동안 위치가 스크롤을 따라와 계속 끌어당긴다). 첫 화면에 둔다 */
+.co-hero, .band { scroll-snap-align: start; }
+.foot { scroll-snap-align: end; }
 /* 첫 화면 "아래로" 표시: Devsisters·Good Job·Rusty Lake */
 .scroll-cue { position: absolute; left: 50%; bottom: 14px; translate: -50% 0; display: grid; justify-items: center; gap: 2px; color: #c3c9d6; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-decoration: none; z-index: 1; }
 .scroll-cue svg { width: 22px; height: 22px; animation: cue 1.6s ease-in-out infinite; }
@@ -295,3 +291,19 @@ html { scroll-padding-top: 72px; }
 
 /* 픽셀 벨트 페이지 첫 화면도 화면 높이를 채운다(메인과 같은 리듬) */
 .stage .game-hero { min-height: calc(100svh - 72px); padding-block: 24px 56px; }
+
+/* 바닥글: 로고와 한 줄, 메뉴 3단(게임·지원·언어), 회사 정보. 레퍼런스 7곳 모두 로고·메뉴가 있다 */
+.foot .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); row-gap: 28px; }
+.foot-brand { display: grid; gap: 8px; align-content: start; }
+.foot-brand p { margin: 0; }
+.foot-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.foot-cols div { display: grid; gap: 8px; align-content: start; }
+.foot-h { margin: 0 0 2px; font-weight: 800; color: var(--ink); font-size: 14px; }
+.foot-cols a { color: var(--muted); text-decoration: none; font-weight: 500; }
+.foot-cols a:hover { color: var(--ink); text-decoration: underline; }
+.foot .colophon { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 20px; }
+.foot .copy { grid-column: 1 / -1; margin: 0; }
+@media (max-width: 860px) {
+  .foot .wrap { grid-template-columns: minmax(0, 1fr); }
+  .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

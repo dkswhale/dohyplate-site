@@ -12,6 +12,7 @@ document.querySelectorAll('[data-clockout]').forEach(canvas => {
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
   function draw(now) {
+    if (W < 1 || H < 1) return; // 크기가 0이면 빌딩 간격도 0이라 반복문이 끝나지 않는다
     const sky = g.createLinearGradient(0, 0, 0, H);
     sky.addColorStop(0, '#3b3f78'); sky.addColorStop(0.55, '#f08a5d'); sky.addColorStop(1, '#ffcf8a');
     g.fillStyle = sky; g.fillRect(0, 0, W, H);

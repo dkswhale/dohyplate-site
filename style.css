@@ -96,17 +96,13 @@ p, ul, ol { margin: 0; }
 .section h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; }
 .kicker { font-weight: 700; color: var(--yellow-text); font-size: 15px; margin-bottom: 8px; }
 
-/* 게임 카드 */
-.game { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 0; background: var(--surface); border-radius: 32px; overflow: hidden; box-shadow: var(--shadow); }
-.game-info { padding: 44px; display: grid; gap: 16px; align-content: center; }
+/* 게임 제목줄과 칩: 게임 띠와 게임 페이지가 같이 쓴다 */
 .game-title { display: flex; align-items: center; gap: 16px; }
 .game-icon { width: 84px; height: 84px; border-radius: 22px; box-shadow: 0 6px 16px -6px rgba(25, 31, 44, 0.35); flex: none; }
-.game h3 { font-size: clamp(28px, 3vw, 36px); font-weight: 800; }
-.game .sub { color: var(--muted); font-weight: 600; }
+.sub { color: var(--muted); font-weight: 600; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
 .chips li { font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 999px; background: #F3EEE7; }
 .chips .tag { background: var(--yellow); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--yellow-edge); }
-.game-art { overflow: hidden; background-color: var(--peach); background-image: radial-gradient(var(--peach-dot) 1.4px, transparent 1.6px); background-size: 18px 18px; display: flex; align-items: center; justify-content: center; padding: 40px 24px 0; min-height: 440px; }
 .phones { display: flex; justify-content: center; align-items: flex-end; }
 .phone { width: clamp(130px, 15vw, 196px); aspect-ratio: 780 / 1688; border-radius: 26px; border: 6px solid var(--belt); overflow: hidden; background: var(--belt); box-shadow: 0 20px 40px -18px rgba(25, 31, 44, 0.55); flex: none; }
 .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
@@ -114,10 +110,24 @@ p, ul, ol { margin: 0; }
 .phones .phone:nth-child(2) { position: relative; z-index: 1; margin-bottom: 18px; }
 .phones .phone:nth-child(3) { transform: translate(-18px, 26px) rotate(6deg); }
 
-.game.soon { grid-template-columns: 1fr; margin-top: 20px; background: transparent; box-shadow: none; border: 2px dashed #D9CBB9; }
-.game.soon .game-info { padding: 32px 44px; }
-.game.soon h3 { font-size: 24px; color: #3C4456; }
-.chips .soon { background: var(--surface); box-shadow: inset 0 0 0 1.5px #C8B8A4; }
+/* 게임 띠: 게임마다 자기 색 세계. 픽셀 벨트는 살구색 판, 퇴근 탈출은 그 로고의 노을 */
+.band{padding-block:72px}
+.band-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.band-info{display:grid;gap:16px}
+.band h2{font-size:clamp(28px,3.2vw,40px);font-weight:800}
+.band-pb{background-color:var(--peach);background-image:radial-gradient(var(--peach-dot) 1.4px,transparent 1.6px);background-size:18px 18px}
+.band-ke{background:linear-gradient(100deg,#2f335f 0%,#3b3f78 56%,#b8606a 82%,#f08a5d 100%);color:#fff} /* 글이 있는 왼쪽은 어둡게(흰 글자 대비 7 이상), 노을은 키보드 쪽에만 */
+.band-ke .sub,.band-ke p{color:#fff3e6}
+.band-ke .kicker{color:#ffd9a8}
+.band-ke .chips li{background:rgba(255,255,255,.18);color:#fff}
+.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;transform:perspective(700px) rotateX(28deg)}
+.keys span{background:#f7f3ea;color:#2a2233;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;font-weight:800;font-size:20px;box-shadow:0 7px 0 #b9ad9c}
+.keys .down{transform:translateY(5px);box-shadow:0 2px 0 #b9ad9c;background:#ffe2a8}
+.keys .wide{grid-column:span 2;aspect-ratio:auto}
+@media(max-width:860px){.band-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+.band{padding-block:44px}
+.band-ke{background:linear-gradient(180deg,#2f335f 0%,#3b3f78 68%,#b8606a 88%,#f08a5d 100%)}
+}
 
 /* 문의 띠 */
 .contact { background: var(--belt); color: #fff; border-radius: 32px; padding: 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; }
@@ -180,9 +190,6 @@ tr:last-child th, tr:last-child td { border-bottom: 0; }
   .w-label span { flex: none; }
   .hero, .game-hero { grid-template-columns: 1fr; gap: 28px; padding-block: 8px 48px; }
   .scene-card { justify-self: center; width: min(100%, 460px); }
-  .game { grid-template-columns: minmax(0, 1fr); }
-  .game-info { padding: 28px 24px; }
-  .game-art { min-height: 0; padding-top: 32px; }
   .steps { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; padding: 32px 24px; }
   .section { padding-block: 64px; }

@@ -66,6 +66,23 @@ p, ul, ol { margin: 0; }
 
 /* 회사 첫 화면: 회사 문구 아래 두 게임의 세계를 같은 크기로 */
 .co-hero { padding-block: 32px 72px; }
+/* 브랜드 띠: 회사 문구는 남색 띠 위, 두 게임 타일은 띠 아래 경계에 걸친다 */
+.co-hero{background:#1d2233;color:#fff;padding-block:40px 0;position:relative}
+.co-hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' width='56' height='56'%3E%3Crect width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3Crect x='4' y='4' width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3C/svg%3E");pointer-events:none}
+.co-hero .wrap{position:relative}
+.co-copy h1{color:#fff}
+.co-copy .lead{color:#c3c9d6}
+.co-hero .eyebrow{background:#2b3244;color:#fff;box-shadow:none}
+.head.dark{background:#1d2233}
+.head.dark .brand,.head.dark .nav a{color:#fff}
+.head.dark .nav a[lang]{border-color:#fff}
+.worlds{margin-bottom:-90px;position:relative;z-index:1}
+.co-hero{margin-bottom:90px}
+.co-mark{display:block;width:64px;height:64px;margin:0 auto 18px}
+@media(max-width:860px){.co-mark{margin:0 0 14px;width:48px;height:48px}
+.worlds{margin-bottom:-60px}
+.co-hero{margin-bottom:60px}
+}
 .co-copy { text-align: center; max-width: 760px; margin: 0 auto 36px; }
 .co-copy h1 { font-size: clamp(32px, 4.8vw, 58px); font-weight: 800; letter-spacing: -0.035em; }
 .co-copy .lead { margin-top: 16px; color: var(--muted); font-size: clamp(16px, 1.5vw, 19px); }

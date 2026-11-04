@@ -1,3 +1,14 @@
+// 화면 아래 영상(data-src): 화면에 들어오면 불러와 재생하고, 나가면 멈춘다. 움직임 줄이기면 정지 화면만 둔다
+(() => {
+  const vids = document.querySelectorAll('video[data-src]');
+  if (!vids.length || matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; v.play().catch(() => {}); } else if (v.src) v.pause();
+  }), { threshold: 0.25 });
+  vids.forEach(v => io.observe(v));
+})();
+
 // 머리글: 조금이라도 스크롤하면 그림자를 붙여 내용과 떨어져 보이게 한다
 (() => {
   const head = document.querySelector('.head');

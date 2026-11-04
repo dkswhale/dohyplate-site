@@ -282,3 +282,13 @@ html { scroll-padding-top: 72px; }
 .lost-code { font-weight: 800; font-size: 15px; letter-spacing: 0.2em; color: var(--yellow-text); }
 .lost h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; }
 .lost .actions { margin-top: 18px; justify-content: center; }
+
+/* 픽셀 벨트 띠: 가운데 휴대폰은 실제 플레이 영상, 벨티가 띠 위 경계에 걸터앉는다(Devsisters 방식, 우리 그림) */
+.phone video { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.band-pb { position: relative; }
+.phones .phone:nth-child(2) { overflow: visible; }
+.phones .phone:nth-child(2) video { border-radius: 20px; }
+.phone .band-belty { object-fit: contain; position: absolute; top: 0; left: 50%; width: 72px; height: 72px; image-rendering: pixelated; translate: -50% -78%; z-index: 2; animation: belty 2.6s ease-in-out infinite; pointer-events: none; }
+@keyframes belty { 50% { transform: translateY(-6px) rotate(3deg); } }
+@media (prefers-reduced-motion: reduce) { .phone .band-belty { animation: none; } }
+@media (max-width: 860px) { .phone .band-belty { width: 48px; height: 48px; } }

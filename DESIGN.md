@@ -38,6 +38,7 @@ Pretendard Variable(jsDelivr 동적 서브셋 CSS). 제목 800, 본문 400. 픽�
 
 ## 그림 다시 만들기
 
+- `img/pixelbelt-play.mp4`: pixel-belt 웹 대상 개발 서버에서 1장 4레벨을 연다. Playwright 가상 시계(`page.clock`)로 1/24초씩 진행하며 2배 화면을 찍고, 0.42초마다 대기열을 누른다. 24fps, 폭 600px, H.264 crf 30. 화면 기록(CDP screencast)과 page 영상은 1배 해상도라 쓰지 않는다.
 - 공유 미리보기·아이콘·404 벨티: `tools/make-images.mjs`(README 참고). 게임 그림이나 회사 문구가 바뀌면 다시 만든다.
 
 - `art.json`: pixel-belt 저장소에서 `npx tsx ../dohyplate-site/tools/export-art.mts ../dohyplate-site/art.json`을 실행한다. 장면 그림 목록은 그 파일의 `PICK`에 있다.
@@ -62,3 +63,4 @@ Pretendard Variable(jsDelivr 동적 서브셋 CSS). 제목 800, 본문 400. 픽�
 |---|---|---|---|
 | 1 | 머리글 따라옴 7곳 중 5곳, "아래로" 표시 3곳 | 따라오는 머리글 / 스크롤 표시 / 점 내비(0곳) | 머리글 + 스크롤 표시 |
 | 2 | og:image 8/8, 트위터 카드 7/8, 직접 만든 404 8/8, 홈 화면 아이콘 4/8, 구조화 정보 2/8 | 공유 미리보기 / 404 / 구조화 정보 | 공유 미리보기(+아이콘) + 404. 멈춘 장면에서 큐브가 크게 그려지던 버그도 고침 |
+| 3 | 플레이 영상(ustwo·Good Job·Devsisters·Treeplla), 캐릭터가 경계를 넘음(Devsisters·Supercell), 게임 로고 글자(Hipster Whale·Draknek) | 픽셀 벨트 플레이 영상 / 벨티 걸터앉기 / 로고 글자(게임에 없는 그림이라 탈락) | 가운데 휴대폰에 실제 플레이 8.8초(화면에 들어올 때 불러옴) + 벨티가 그 휴대폰 위에 앉음 |

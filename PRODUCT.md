@@ -51,7 +51,7 @@ web
 
 ## Evidence on Hand
 
-- 픽셀 벨트 아이콘 `img/logo-c.png`, 최신 게임 화면 3장 `img/play-dressed.jpg`·`map-chapter.jpg`·`gallery.jpg`(2026-11-04 develop에서 찍음).
+- 픽셀 벨트 아이콘 `img/logo-c.png`, 최신 게임 화면 3장 `img/play-dressed.webp`·`map-chapter.webp`·`gallery.webp`(2026-11-04 develop에서 찍음).
 - 게임 데이터 `art.json`(팔레트, 벨티, 주민 37명, 그림 13개). 사이트 장면은 이 데이터로 그린다.
 - pixel-belt 저장소 `store/thumbnail.png`(1932×828 가로 배너), `store/screenshot-4.png`, `screenshots/`(게임 화면 PNG, `npm run shot`으로 다시 찍음).
 - 없는 것: 스토어 링크, 다운로드 수, 평점, 리뷰, 언론 기사, 수상. 지어내지 않는다.

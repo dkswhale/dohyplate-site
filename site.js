@@ -47,7 +47,14 @@ document.querySelectorAll('[data-clockout]').forEach(canvas => {
   addEventListener('resize', size);
   document.fonts?.load('40px "Do Hyeon"').then(() => draw(performance.now()));
   if (still) { draw(0); return; }
-  (function loop(now) { draw(now); requestAnimationFrame(loop); })(performance.now());
+  // 화면 밖이거나 탭이 가려지면 멈춘다(배터리)
+  let on = true, running = false;
+  const loop = now => { if (!on) { running = false; return; } draw(now); requestAnimationFrame(loop); };
+  const wake = () => { if (on && !running) { running = true; requestAnimationFrame(loop); } };
+  let seen = true;
+  new IntersectionObserver(([e]) => { seen = e.isIntersecting; on = seen && !document.hidden; wake(); }).observe(canvas);
+  document.addEventListener('visibilitychange', () => { on = seen && !document.hidden; wake(); });
+  wake();
 });
 
 (async () => {

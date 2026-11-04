@@ -5,70 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DOHYPLATE</title>
 <meta name="description" content="DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.">
-<meta name="theme-color" content="#F6D2AE">
+<meta name="theme-color" content="#1d2233">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap">
 <link rel="stylesheet" href="/style.css">
 <script src="/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="head peach"><div class="wrap">
+<header class="head dark"><div class="wrap">
   <a class="brand" href="/en/" aria-label="DOHYPLATE"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg><span>DOHYPLATE</span></a>
-  <nav class="nav" aria-label="Main menu"><a href="/en/#games">Games</a><a href="/en/support/">Support</a><a href="/" lang="ko">한국어</a></nav>
+  <nav class="nav" aria-label="Main menu"><a href="/en/#games">Games</a><a href="/en/support/">Contact</a><a href="/" lang="ko">한국어</a></nav>
 </div></header>
 
 <main id="main">
-<section class="stage" aria-label="Introduction">
-<div class="wrap hero">
-  <div>
-    <p class="eyebrow"><i></i>Mobile puzzle and casual games</p>
-    <h1>Short breaks,<br>puzzles you<br>remember</h1>
-    <p class="lead">DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games. Our first game, Pixel Belt, is coming soon.</p>
-    <div class="actions">
-      <a class="btn primary" href="/en/pixel-belt/">See Pixel Belt<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="btn" href="/en/support/">Contact us</a>
-    </div>
+<section class="co-hero" aria-label="Introduction"><div class="wrap">
+  <div class="co-copy">
+    <svg class="co-mark" viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="#fff"/><rect y="4" width="3" height="3" fill="#fff"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg>
+    <p class="eyebrow"><i></i>DOHYPLATE GAMES</p>
+    <h1>Short breaks,<br>games you remember</h1>
+    <p class="lead">DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.</p>
   </div>
-  <div class="scene-card"><canvas data-scene="0" role="img" aria-label="Pixel Belt scene: characters move along the belt and clear cubes of their color from the picture"></canvas></div>
-</div>
-<p class="scene-cap">This scene uses the real Pixel Belt rules</p>
-</section>
-
-<div class="parade" data-parade aria-hidden="true"></div>
-
-<section class="section" id="games" aria-labelledby="games-h"><div class="wrap">
-  <div class="section-head"><div><p class="kicker">Games</p><h2 id="games-h">Our games</h2></div></div>
-  <article class="game">
-    <div class="game-info">
-      <div class="game-title">
-        <img class="game-icon" src="/img/logo-c.png" alt="" width="84" height="84">
-        <div><h3>Pixel Belt</h3><p class="sub">A pixel puzzle with a conveyor belt</p></div>
-      </div>
-      <p>Send characters onto a conveyor belt. They clear the cubes of a pixel picture, one color at a time. Each picture you complete brings color back to the island.</p>
-      <ul class="chips"><li class="tag">Coming soon</li><li>20 regions</li><li>300 pictures</li><li>Toss · App&nbsp;Store · Google&nbsp;Play · ONE&nbsp;store</li></ul>
-      <div class="actions"><a class="btn primary" href="/en/pixel-belt/">Learn more<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    </div>
-    <div class="game-art">
-      <div class="phones">
-        <div class="phone"><img src="/img/map-chapter.jpg" alt="Map screen: each picture you complete brings color back to the island" width="780" height="1688" loading="lazy"></div>
-        <div class="phone"><img src="/img/play-dressed.jpg" alt="Play screen: characters on the belt clear cubes of their color" width="780" height="1688" loading="lazy"></div>
-        <div class="phone"><img src="/img/gallery.jpg" alt="Album screen: your pictures, sorted by region" width="780" height="1688" loading="lazy"></div>
-      </div>
-    </div>
-  </article>
-  <article class="game soon">
-    <div class="game-info">
-      <h3>Clock-Out Escape</h3>
-      <p>A 3D game. A tiny office worker runs an obstacle course of keyboard paths to leave the office.</p>
-      <ul class="chips"><li class="soon">In development</li><li>Working title</li></ul>
-    </div>
-  </article>
+  <div class="worlds">
+    <a class="world" data-game="pb" href="/en/pixel-belt/">
+      <div class="w-art pb"><canvas data-scene="0" role="img" aria-label="Pixel Belt scene: characters on the belt clear cubes of their color"></canvas></div>
+      <div class="w-label"><b>Pixel Belt</b><span>A pixel puzzle with a conveyor belt</span><em class="on">Coming soon</em></div>
+    </a>
+    <a class="world" data-game="ke" href="#clockout">
+      <div class="w-art ke"><canvas data-clockout role="img" aria-label="Clock-Out Escape art: a 17:59 clock and a red tie over buildings at sunset"></canvas></div>
+      <div class="w-label"><b>Clock-Out Escape</b><span>17:59. Run the office obstacle course and go home.</span><em>In development</em></div>
+    </a>
+  </div>
 </div></section>
 
-<section class="section" id="contact" aria-labelledby="contact-h" style="padding-top:0"><div class="wrap">
+<section class="band band-pb" id="games" data-sec="pb" aria-labelledby="pb-h"><div class="wrap band-grid">
+  <div class="band-info">
+    <p class="kicker">No.1 · Coming soon</p>
+    <div class="game-title"><img class="game-icon" src="/img/logo-c.png" alt="" width="84" height="84"><div><h2 id="pb-h">Pixel Belt</h2><p class="sub">A pixel puzzle with a conveyor belt</p></div></div>
+    <p>Send characters onto a conveyor belt. They clear the cubes of a pixel picture, one color at a time. Each picture you complete brings color back to the island.</p>
+    <ul class="chips"><li>20 regions</li><li>300 pictures</li><li>Toss · App&nbsp;Store · Google&nbsp;Play · ONE&nbsp;store</li></ul>
+    <div class="actions"><a class="btn primary" href="/en/pixel-belt/">Learn more</a></div>
+  </div>
+  <div class="phones">
+    <div class="phone"><img src="/img/map-chapter.webp" alt="Map screen: each picture you complete brings color back to the island" width="600" height="1299" loading="lazy"></div>
+    <div class="phone"><img src="/img/play-dressed.webp" alt="Play screen: characters on the belt clear cubes of their color" width="600" height="1299" loading="lazy"></div>
+    <div class="phone"><img src="/img/gallery.webp" alt="Album screen: your pictures, sorted by region" width="600" height="1299" loading="lazy"></div>
+  </div>
+</div></section>
+<section class="band band-ke" id="clockout" data-sec="ke" aria-labelledby="ke-h"><div class="wrap band-grid">
+  <div class="band-info">
+    <p class="kicker">No.2 · In development</p>
+    <div class="game-title"><img class="game-icon" src="/img/clockout-icon.png" alt="" width="84" height="84"><div><h2 id="ke-h">Clock-Out Escape</h2><p class="sub">Working title · 3D obstacle course</p></div></div>
+    <p>A 3D game. A tiny office worker runs an obstacle course of keyboard paths to leave the office. The keycaps stand up like a real keyboard.</p>
+    <ul class="chips"><li>In development</li><li>Working title</li></ul>
+  </div>
+  <div class="keys" aria-hidden="true"><span>Q</span><span>W</span><span>E</span><span>R</span><span class="down">T</span><span>Y</span><span>A</span><span>S</span><span class="down">D</span><span>F</span><span>G</span><span>H</span><span>Z</span><span>X</span><span>C</span><span>V</span><span class="wide">Enter</span></div>
+</div></section>
+<section class="section" id="contact" aria-labelledby="contact-h"><div class="wrap">
   <div class="contact">
     <div><h2 id="contact-h">Contact</h2><p>For game support, partnerships, and other questions, send us an email. For payments and refunds, see <a href="/en/support/" style="color:#fff">Support</a>.</p></div>
     <a class="mail-cell mail" href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a>
@@ -80,7 +76,7 @@
   <dl class="colophon">
     <dt>Company</dt><dd>DOHYPLATE (도이플레이트)</dd>
     <dt>Representative</dt><dd>Dohyung Kim</dd>
-    <dt>Business reg. no.</dt><dd><span class="nowrap">794-13-02501</span> (Republic of Korea)</dd>
+    <dt>Business reg. no.</dt><dd><span class="nowrap">794-13-02501</span></dd>
     <dt>Email</dt><dd><a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></dd>
   </dl>
   <div class="foot-links">

@@ -36,4 +36,4 @@ Pretendard Variable(jsDelivr 동적 서브셋 CSS). 제목 800, 본문 400. 픽�
 ## 그림 다시 만들기
 
 - `art.json`: pixel-belt 저장소에서 `npx tsx ../dohyplate-site/tools/export-art.mts ../dohyplate-site/art.json`을 실행한다. 장면 그림 목록은 그 파일의 `PICK`에 있다.
-- `img/*.jpg`: pixel-belt에서 `SHOT_CHANNEL=chrome npm run shot`을 실행한다. `screenshots/`의 `play-dressed`, `map-chapter`, `gallery`를 780×1688 JPEG(품질 82)로 바꾼다.
+- `img/*.webp`: pixel-belt에서 `SHOT_CHANNEL=chrome npm run shot`을 실행한다. `screenshots/`의 `play-dressed`, `map-chapter`, `gallery`를 폭 600px WebP(품질 80)로 바꾼다: `cwebp -q 80 -resize 600 0 <원본> -o img/<이름>.webp`. 표시 폭 × 화면 배율(최대 196px × 3)보다 크면 된다.

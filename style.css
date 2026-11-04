@@ -292,3 +292,6 @@ html { scroll-padding-top: 72px; }
 @keyframes belty { 50% { transform: translateY(-6px) rotate(3deg); } }
 @media (prefers-reduced-motion: reduce) { .phone .band-belty { animation: none; } }
 @media (max-width: 860px) { .phone .band-belty { width: 48px; height: 48px; } }
+
+/* 픽셀 벨트 페이지 첫 화면도 화면 높이를 채운다(메인과 같은 리듬) */
+.stage .game-hero { min-height: calc(100svh - 72px); padding-block: 24px 56px; }

@@ -2,6 +2,7 @@
 # 번역에 없는 한국어가 남으면 멈춘다. 문의·개인정보처리방침 영어판은 손으로 고친다(본문이 사실 기록이라).
 import re, sys
 T = {
+ '픽셀 벨트 플레이 영상: 캐릭터가 벨트를 돌며 같은 색 큐브를 지워요': 'Pixel Belt gameplay: characters move along the belt and clear cubes of their color',
  '픽셀 벨트 플레이 영상: 캐릭터를 벨트에 태워 조개 그림을 다 지워요': 'Pixel Belt gameplay: characters ride the belt and clear a shell picture',
  '스크롤': 'Scroll',
  '도이플레이트 DOHYPLATE': 'DOHYPLATE',

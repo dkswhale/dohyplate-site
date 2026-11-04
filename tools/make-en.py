@@ -2,6 +2,7 @@
 # 번역에 없는 한국어가 남으면 멈춘다. 문의·개인정보처리방침 영어판은 손으로 고친다(본문이 사실 기록이라).
 import re, sys
 T = {
+ '스크롤': 'Scroll',
  '도이플레이트 DOHYPLATE': 'DOHYPLATE',
  '도이플레이트는 모바일 퍼즐·캐주얼 게임을 만드는 게임 개발사예요.': 'DOHYPLATE is a game studio in Korea. We make mobile puzzle and casual games.',
  '본문으로 건너뛰기': 'Skip to content',

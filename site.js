@@ -1,3 +1,11 @@
+// 머리글: 조금이라도 스크롤하면 그림자를 붙여 내용과 떨어져 보이게 한다
+(() => {
+  const head = document.querySelector('.head');
+  if (!head) return;
+  const on = () => head.classList.toggle('scrolled', scrollY > 4);
+  addEventListener('scroll', on, { passive: true }); on();
+})();
+
 // 스크롤 등장: .reveal이 화면에 들어오면 .in을 붙인다. 한 번 나타나면 다시 숨기지 않는다
 (() => {
   const els = document.querySelectorAll('.reveal');

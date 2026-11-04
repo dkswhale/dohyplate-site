@@ -256,3 +256,19 @@ html { scroll-snap-type: y proximity; }
   .band .game-icon { width: 104px; height: 104px; border-radius: 26px; }
   .band .sub { font-size: 18px; }
 }
+
+/* 따라오는 머리글: 레퍼런스 7곳 중 5곳. 스크롤 맞춤 위치는 머리글 아래로(scroll-padding) */
+html { scroll-padding-top: 72px; }
+.head { position: sticky; top: 0; z-index: 20; background: var(--page); transition: box-shadow 0.2s; }
+.head.peach { background-color: var(--peach); }
+.head.dark { background: #1d2233; }
+.head.scrolled { box-shadow: 0 6px 18px -10px rgba(25, 31, 44, 0.45); }
+.band { min-height: calc(100svh - 72px); }
+.head.dark, .band { scroll-snap-align: start; }
+.co-hero { scroll-snap-align: none; }
+/* 첫 화면 "아래로" 표시: Devsisters·Good Job·Rusty Lake */
+.scroll-cue { position: absolute; left: 50%; bottom: 14px; translate: -50% 0; display: grid; justify-items: center; gap: 2px; color: #c3c9d6; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-decoration: none; z-index: 1; }
+.scroll-cue svg { width: 22px; height: 22px; animation: cue 1.6s ease-in-out infinite; }
+@keyframes cue { 50% { transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue svg { animation: none; } }
+@media (max-height: 700px) { .scroll-cue { display: none; } }

@@ -41,6 +41,8 @@ T = {
  '주민 목록': 'Islanders', '안내': 'Information',
  '개인정보처리방침과 결제·환불 안내를 확인할 수 있어요.': 'Read the privacy policy and the payment and refund information.',
  '개인정보처리방침': 'Privacy Policy',
+ '퇴근 탈출 개발 중 화면: 노을 진 빌딩 사이로 키보드 길이 길게 이어져요': 'Clock-Out Escape, in development: a long keyboard path runs between buildings at sunset',
+ '개발 중 화면': 'In development',
 }
 ASSETS = ('/img/', '/style.css', '/site.js', '/favicon', '/art.json')
 def make(src, dst, ko_path):

@@ -25,6 +25,7 @@ body { margin: 0; background: var(--page); color: var(--ink); font-family: var(-
 img { max-width: 100%; }
 a { color: var(--yellow-text); text-underline-offset: 3px; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--belt); outline-offset: 3px; border-radius: 6px; }
+.head.dark a:focus-visible, .co-hero a:focus-visible, .band-ke a:focus-visible, .contact a:focus-visible { outline-color: var(--yellow); } /* 어두운 바탕에서는 노랑 */
 h1, h2, h3 { line-height: 1.25; letter-spacing: -0.02em; text-wrap: balance; margin: 0; }
 p, ul, ol { margin: 0; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
@@ -137,10 +138,9 @@ p, ul, ol { margin: 0; }
 .band-ke .sub,.band-ke p{color:#fff3e6}
 .band-ke .kicker{color:#ffd9a8}
 .band-ke .chips li{background:rgba(255,255,255,.18);color:#fff}
-.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;transform:perspective(700px) rotateX(28deg)}
-.keys span{background:#f7f3ea;color:#2a2233;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;font-weight:800;font-size:20px;box-shadow:0 7px 0 #b9ad9c}
-.keys .down{transform:translateY(5px);box-shadow:0 2px 0 #b9ad9c;background:#ffe2a8}
-.keys .wide{grid-column:span 2;aspect-ratio:auto}
+.ke-shot{position:relative;margin:0;justify-self:center;width:min(100%,460px);border-radius:26px;overflow:hidden;box-shadow:0 24px 48px -20px rgba(20,18,40,.6);border:6px solid #2b2440}
+.ke-shot img{display:block;width:100%;height:auto}
+.ke-shot figcaption{position:absolute;left:12px;top:12px;font-size:13px;font-weight:700;color:#2a2233;background:rgba(255,255,255,.92);padding:3px 10px;border-radius:999px}
 @media(max-width:860px){.band-grid{grid-template-columns:minmax(0,1fr);gap:28px}
 .band{padding-block:44px}
 .band-ke{background:linear-gradient(180deg,#2f335f 0%,#3b3f78 68%,#b8606a 88%,#f08a5d 100%)}

@@ -55,7 +55,7 @@ T = {
  '개인정보처리방침': 'Privacy Policy',
  '퇴근 탈출 개발 중 화면: 노을 진 빌딩 사이로 키보드 길이 길게 이어져요': 'Clock-Out Escape, in development: a long keyboard path runs between buildings at sunset',
  '개발 중 화면': 'In development',
- '픽셀 벨트와 퇴근 탈출을 만들고 있어요.': 'We make Pixel Belt and Clock-Out Escape.',
+ '모바일 게임 스튜디오': 'Mobile game studio',
  '퇴근 탈출 개발 중 화면: 직장인이 노을 진 키보드 길을 달려요': 'Clock-Out Escape, in development: an office worker runs along a keyboard path at sunset',
  '사무실 장애물 코스 3D 게임': 'A 3D office obstacle course',
  '결제·환불은 ': 'For payments and refunds, see ',

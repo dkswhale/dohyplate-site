@@ -7,7 +7,8 @@
 1. 게임 그림을 크게 쓴다. 레퍼런스: Devsisters, Rusty Lake, Dream Games(첫 화면을 게임 세계가 채운다).
 2. 그림은 우리 게임 것만 쓴다. 장면·주민·벨티는 게임 데이터(`art.json`)로 그리고, 화면 사진은 최신 게임에서 찍는다. 다른 회사 그림이나 일반 아이콘을 쓰지 않는다.
 3. 휴대폰에서 먼저 확인한다(폭 360px, 390px).
-4. 회사 사이트다. 메인은 게임 2개(픽셀 벨트, 퇴근 탈출)를 같은 무게로 보여 준다(2026-11-04 사용자 지적).
+4. 문구는 사실만 쓴다. 슬로건·어필 문장을 쓰지 않는다(2026-11-04 사용자 지적). 레퍼런스 중 Dream Games·Snowman은 문구가 없고, Supercell·Draknek은 만든 게임을 말하는 한 줄뿐이다.
+5. 회사 사이트다. 메인은 게임 2개(픽셀 벨트, 퇴근 탈출)를 같은 무게로 보여 준다(2026-11-04 사용자 지적).
 
 ## 색 (게임 화면과 같다)
 
@@ -37,6 +38,7 @@ Pretendard Variable(jsDelivr 동적 서브셋 CSS). 제목 800, 본문 400. 픽�
 ## 그림 다시 만들기
 
 - `art.json`: pixel-belt 저장소에서 `npx tsx ../dohyplate-site/tools/export-art.mts ../dohyplate-site/art.json`을 실행한다. 장면 그림 목록은 그 파일의 `PICK`에 있다.
+- `img/clockout-run.mp4`, `img/clockout-run.webp`(정지 화면): 첫 화면 퇴근 탈출 달리기. keyboard-escape 16판 시험판 복사본에서 카메라를 낮추고(높이 1.5, 뒤 2.4), `#app` 최대 폭을 풀어 가로 1100×880으로 그린 뒤, 쉬는 곳 2에서 앞으로 달리게 하고 화면 기록(CDP screencast)으로 약 4초를 찍는다. 앞 표지판 구간을 잘라 3.25초, 960×768 H.264(crf 27)로 만든다. 움직임 줄이기면 `site.js`가 첫 장면에 멈춘다.
 - `img/clockout-path.webp`: keyboard-escape 16판 시험판에서 `window.__3d.spawn(2)`로 쉬는 곳 2에 간 뒤, HUD를 숨기고 캔버스 위쪽 41%(키보드 길과 노을)를 2배 해상도로 찍는다. `img/clockout-icon.png`는 그 저장소 `docs/spike/assets/logo-600.png`다.
 - `img/*.webp`: pixel-belt에서 `SHOT_CHANNEL=chrome npm run shot`을 실행한다. `screenshots/`의 `play-dressed`, `map-chapter`, `gallery`를 폭 600px WebP(품질 80)로 바꾼다: `cwebp -q 80 -resize 600 0 <원본> -o img/<이름>.webp`. 표시 폭 × 화면 배율(최대 196px × 3)보다 크면 된다.
 
@@ -49,3 +51,4 @@ Pretendard Variable(jsDelivr 동적 서브셋 CSS). 제목 800, 본문 400. 픽�
 | 3 | 회사 정체성이 약함 | 살아 있는 표식 / 브랜드 띠 / 사실 띠 | 게임 균형 유지, 사실만, 대비 4.5 이상 | 남색 브랜드 띠 + 큰 표식 + 타일 걸침 |
 | 4 | 전송량 1.1MB, 화면 밖에서도 움직임 | JPEG 축소 / WebP 축소 / Pretendard 빼기 | 전송량, 3배 화면 선명도, 정한 결정 유지 | 600px WebP: 1,138KB → 599KB, 화면 밖 스크립트 23 → 0ms/5초 |
 | 5 | 퇴근 탈출 키보드 그림이 게임 그림이 아님 | 그대로 / 썸네일 잘라 쓰기 / 시험판에서 새로 찍기 | 실제 게임 빌드, UI 글자 없음, 선명도 | 16판 키보드 길 화면(23KB). 퇴근 탈출/픽셀 벨트 면적 97%/98% |
+| 6 (사용자 요청) | 첫 화면 퇴근 탈출이 정지한 시계, 문구가 어필 | - | 사용자 지적, 레퍼런스 문구 조사 | 시험판 달리기 영상(148KB), 문구는 회사 이름과 만든 게임 한 줄. 시계 장면 코드와 Do Hyeon 글꼴 삭제 |

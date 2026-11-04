@@ -47,12 +47,12 @@ web
 - 이름: 도이플레이트 / DOHYPLATE. 표식: 2×2 정사각형(왼쪽 위·오른쪽 아래 노랑 `#f5b700`, 나머지 글자색).
 - 픽셀 벨트 브랜드: 노랑 `#FFC93C`(로고 C와 같은 노랑, 2026-10-21 사용자 결정), 글자 `#191F2C`, 노랑 계열 글자 `#8A5A00`.
 - 한국어 문구는 토스 톤 해요체. 짧고 구체적으로.
-- 기존 문구 "짧게 쉬고, 오래 생각나는 퍼즐을 만들어요"(첫 버전 사이트).
+- 문구는 사실만. 슬로건(예: 첫 버전의 "짧게 쉬고, 오래 생각나는 퍼즐을 만들어요")은 2026-11-04 사용자가 빼라고 했다.
 
 ## Evidence on Hand
 
 - 픽셀 벨트 아이콘 `img/logo-c.png`, 최신 게임 화면 3장 `img/play-dressed.webp`·`map-chapter.webp`·`gallery.webp`(2026-11-04 develop에서 찍음).
-- 퇴근 탈출: 로고 `img/clockout-icon.png`, 16판 시험판 화면 `img/clockout-path.webp`(키보드 길, "개발 중 화면"으로 표시).
+- 퇴근 탈출: 로고 `img/clockout-icon.png`, 16판 시험판 화면 `img/clockout-path.webp`(키보드 길, "개발 중 화면"으로 표시)과 달리기 영상 `img/clockout-run.mp4`.
 - 게임 데이터 `art.json`(팔레트, 벨티, 주민 37명, 그림 13개). 사이트 장면은 이 데이터로 그린다.
 - pixel-belt 저장소 `store/thumbnail.png`(1932×828 가로 배너), `store/screenshot-4.png`, `screenshots/`(게임 화면 PNG, `npm run shot`으로 다시 찍음).
 - 없는 것: 스토어 링크, 다운로드 수, 평점, 리뷰, 언론 기사, 수상. 지어내지 않는다.

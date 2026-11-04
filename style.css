@@ -71,8 +71,8 @@ p, ul, ol { margin: 0; }
 .co-hero{background:#1d2233;color:#fff;padding-block:40px 0;position:relative}
 .co-hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' width='56' height='56'%3E%3Crect width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3Crect x='4' y='4' width='3' height='3' fill='%23f5b700' opacity='.05'/%3E%3C/svg%3E");pointer-events:none}
 .co-hero .wrap{position:relative}
-.co-copy h1{color:#fff}
-.co-copy .lead{color:#c3c9d6}
+.co-hero .co-copy h1{color:#fff}
+.co-hero .co-copy .lead{color:#c3c9d6}
 .co-hero .eyebrow{background:#2b3244;color:#fff;box-shadow:none}
 .head.dark{background:#1d2233}
 .head.dark .brand,.head.dark .nav a{color:#fff}

@@ -1,5 +1,54 @@
 // 픽셀 벨트 장면. 그림·주민·벨티·팔레트는 게임 데이터(art.json)를 쓰고, 큐브·캐릭터 그리는 법은 게임 코드(src/ui/render.ts, sprites.ts)를 옮겼다.
 // [data-scene]: 벨트가 그림판을 돌고 주민이 같은 색 큐브를 지우는 장면. [data-parade]: 주민 행렬 띠. [data-residents]: 주민 목록.
+// [data-clockout]: 퇴근 탈출 장면. 그 게임의 로고 그림(keyboard-escape docs/spike/make-store-assets.mjs)과 같은 노을·빌딩·17:59 시계·넥타이를 크게 그린다.
+document.querySelectorAll('[data-clockout]').forEach(canvas => {
+  const g = canvas.getContext('2d');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W = 0, H = 0;
+  function size() {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function draw(now) {
+    const sky = g.createLinearGradient(0, 0, 0, H);
+    sky.addColorStop(0, '#3b3f78'); sky.addColorStop(0.55, '#f08a5d'); sky.addColorStop(1, '#ffcf8a');
+    g.fillStyle = sky; g.fillRect(0, 0, W, H);
+    // 빌딩: 로고와 같은 높이 비율을 폭에 맞춰 되풀이한다
+    const u = Math.min(W, H) / 600, hs = [70, 120, 90, 150, 100, 130, 80, 110];
+    g.fillStyle = '#2b2440';
+    for (let x = 0, k = 0; x < W; x += 76 * u, k++) g.fillRect(x, H - hs[k % 8] * u, 70 * u, hs[k % 8] * u);
+    // 빌딩 창문: 몇 개만 켠다
+    g.fillStyle = 'rgba(255, 207, 138, 0.85)';
+    for (let x = 0, k = 0; x < W; x += 76 * u, k++) for (let r = 1; r * 22 * u < hs[k % 8] * u - 14 * u; r++) if ((k * 7 + r * 3) % 5 === 0) g.fillRect(x + 14 * u, H - hs[k % 8] * u + r * 22 * u, 12 * u, 9 * u);
+    // 시계
+    const cx = W / 2, cy = H * 0.45, r = Math.min(W, H) * 0.3;
+    g.fillStyle = '#f7f3ea'; g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.fill();
+    g.lineWidth = r * 0.095; g.strokeStyle = '#2a2233'; g.stroke();
+    g.fillStyle = '#2a2233';
+    for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; g.save(); g.translate(cx + Math.cos(a) * r * 0.82, cy + Math.sin(a) * r * 0.82); g.rotate(a); g.fillRect(-r * 0.063, -r * 0.026, r * 0.126, r * 0.052); g.restore(); }
+    // 초침: 59분에서 마지막 1분이 흐른다
+    if (!still) {
+      const a = (now / 1000 % 60) / 60 * Math.PI * 2 - Math.PI / 2;
+      g.strokeStyle = '#d8344a'; g.lineWidth = r * 0.025; g.lineCap = 'round';
+      g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(a) * r * 0.72, cy + Math.sin(a) * r * 0.72); g.stroke();
+    }
+    g.fillStyle = '#2a2233'; g.font = `400 ${r * 0.59}px "Do Hyeon", "Pretendard Variable", sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.fillText(still || Math.floor(now / 500) % 2 ? '17:59' : '17 59', cx, cy + r * 0.03);
+    // 넥타이
+    const t = r / 190;
+    g.fillStyle = '#d8344a'; g.beginPath();
+    [[276, 455], [324, 455], [312, 482], [334, 575], [300, 600], [266, 575], [288, 482]].forEach(([x, y], i) => g[i ? 'lineTo' : 'moveTo'](cx + (x - 300) * t, cy + (y - 270) * t));
+    g.closePath(); g.fill();
+  }
+  size();
+  addEventListener('resize', size);
+  document.fonts?.load('40px "Do Hyeon"').then(() => draw(performance.now()));
+  if (still) { draw(0); return; }
+  (function loop(now) { draw(now); requestAnimationFrame(loop); })(performance.now());
+});
+
 (async () => {
   const hosts = document.querySelectorAll('[data-scene], [data-parade], [data-residents]');
   if (!hosts.length) return;

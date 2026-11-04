@@ -5,39 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>도이플레이트 DOHYPLATE</title>
 <meta name="description" content="도이플레이트는 모바일 퍼즐·캐주얼 게임을 만드는 게임 개발사예요.">
-<meta name="theme-color" content="#F6D2AE">
+<meta name="theme-color" content="#FFF9F2">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap">
 <link rel="stylesheet" href="/style.css">
 <script src="/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
-<header class="head peach"><div class="wrap">
+<header class="head"><div class="wrap">
   <a class="brand" href="/" aria-label="DOHYPLATE"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg><span>DOHYPLATE</span></a>
   <nav class="nav" aria-label="주 메뉴"><a href="/#games">게임</a><a href="/support/">문의</a><a href="/en/" lang="en">EN</a></nav>
 </div></header>
 
 <main id="main">
-<section class="stage" aria-label="소개">
-<div class="wrap hero">
-  <div>
-    <p class="eyebrow"><i></i>모바일 퍼즐·캐주얼 게임</p>
-    <h1>짧게 쉬고,<br>오래 생각나는<br>퍼즐을 만들어요</h1>
-    <p class="lead">도이플레이트는 모바일 퍼즐·캐주얼 게임을 만드는 게임 개발사예요. 첫 게임 픽셀 벨트를 준비하고 있어요.</p>
-    <div class="actions">
-      <a class="btn primary" href="/pixel-belt/">픽셀 벨트 보기<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="btn" href="/support/">문의하기</a>
-    </div>
+<section class="co-hero" aria-label="소개"><div class="wrap">
+  <div class="co-copy">
+    <p class="eyebrow"><i></i>DOHYPLATE GAMES</p>
+    <h1>짧게 쉬고, 오래 생각나는<br>게임을 만들어요</h1>
+    <p class="lead">도이플레이트는 모바일 퍼즐·캐주얼 게임을 만드는 게임 개발사예요.</p>
   </div>
-  <div class="scene-card"><canvas data-scene="0" role="img" aria-label="픽셀 벨트 장면: 벨트를 도는 캐릭터가 그림판의 같은 색 큐브를 쏴서 지워요"></canvas></div>
-</div>
-<p class="scene-cap">픽셀 벨트 실제 규칙으로 움직여요</p>
-</section>
-
-<div class="parade" data-parade aria-hidden="true"></div>
+  <div class="worlds">
+    <a class="world" data-game="pb" href="/pixel-belt/">
+      <div class="w-art pb"><canvas data-scene="0" role="img" aria-label="픽셀 벨트 장면: 벨트를 도는 캐릭터가 같은 색 큐브를 지워요"></canvas></div>
+      <div class="w-label"><b>픽셀 벨트</b><span>벨트로 색을 지우는 픽셀 퍼즐</span><em class="on">출시 준비 중</em></div>
+    </a>
+    <a class="world" data-game="ke" href="#clockout">
+      <div class="w-art ke"><canvas data-clockout role="img" aria-label="퇴근 탈출 그림: 노을 진 빌딩 위 17:59 시계와 빨간 넥타이"></canvas></div>
+      <div class="w-label"><b>퇴근 탈출</b><span>17:59, 사무실 장애물 코스를 달려 퇴근해요</span><em>개발 중</em></div>
+    </a>
+  </div>
+</div></section>
 
 <section class="section" id="games" aria-labelledby="games-h"><div class="wrap">
   <div class="section-head"><div><p class="kicker">게임</p><h2 id="games-h">우리가 만드는 게임</h2></div></div>
@@ -59,7 +60,7 @@
       </div>
     </div>
   </article>
-  <article class="game soon">
+  <article class="game soon" id="clockout">
     <div class="game-info">
       <h3>퇴근 탈출</h3>
       <p>몸이 작아진 직장인이 키보드 길로 된 사무실 장애물 코스를 달려 퇴근하는 3D 게임이에요.</p>

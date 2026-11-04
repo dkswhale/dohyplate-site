@@ -1,5 +1,6 @@
-# GitHub Pages(Jekyll)가 개발 문서를 웹페이지로 내보내지 않게 한다
+# GitHub Pages(Jekyll)가 개발 문서·도구를 웹페이지로 내보내지 않게 한다
 exclude:
   - README.md
   - PRODUCT.md
   - DESIGN.md
+  - tools

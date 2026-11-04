@@ -5,59 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pixel Belt · DOHYPLATE</title>
 <meta name="description" content="Send characters onto a conveyor belt and clear the cubes of a pixel picture, one color at a time.">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#11141b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6D2AE">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/pixel-belt/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/pixel-belt/">
-<link rel="preload" href="/fonts/Galmuri11-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/style.css">
-<script src="/puzzle.js" defer></script>
+<script src="/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="head"><div class="wrap">
+<header class="head peach"><div class="wrap">
   <a class="brand" href="/en/" aria-label="DOHYPLATE"><svg viewBox="0 0 7 7" aria-hidden="true"><rect width="3" height="3" fill="#f5b700"/><rect x="4" width="3" height="3" fill="currentColor"/><rect y="4" width="3" height="3" fill="currentColor"/><rect x="4" y="4" width="3" height="3" fill="#f5b700"/></svg><span>DOHYPLATE</span></a>
-  <nav class="nav" aria-label="Main"><a href="/en/#games" aria-current="page">Games</a><a href="/en/support/">Support</a><a href="/pixel-belt/" lang="ko">한국어</a></nav>
+  <nav class="nav" aria-label="Main menu"><a href="/en/#games" aria-current="page">Games</a><a href="/en/support/">Support</a><a href="/pixel-belt/" lang="ko">한국어</a></nav>
 </div></header>
 
 <main id="main">
+<section class="stage" aria-label="About Pixel Belt">
 <div class="wrap game-hero">
   <div>
-    <div class="title">
-      <img class="game-icon" src="/img/logo-c.png" alt="Pixel Belt icon" width="96" height="96">
-      <h1>Pixel Belt</h1>
+    <div class="game-title">
+      <img class="game-icon" src="/img/logo-c.png" alt="Pixel Belt icon" width="84" height="84">
+      <ul class="chips"><li class="tag">Coming soon</li></ul>
     </div>
-    <p class="lead">A pixel puzzle with a conveyor belt</p>
-    <p>Send characters onto a conveyor belt. They clear the cubes of a pixel picture, one color at a time.</p>
-    <ul class="facts"><li class="tag">Coming soon</li><li>20 regions</li><li>300 pictures</li><li>Toss · App&nbsp;Store · Google&nbsp;Play · ONE&nbsp;store</li></ul>
+    <h1>Pixel Belt</h1>
+    <p class="lead" style="font-size:20px;color:#3C4456;margin-top:14px">A pixel puzzle with a conveyor belt. Each picture you complete brings color back to the island.</p>
+    <ul class="chips" style="margin-top:22px"><li>20 regions</li><li>300 pictures</li><li>37 islanders</li><li>Toss · App&nbsp;Store · Google&nbsp;Play · ONE&nbsp;store</li></ul>
   </div>
-  <div class="puzzle" aria-hidden="true" style="--cols:8;--rows:8" data-art="..DDDD.. .DWWWWD. .DWBWBD. .DWWWWD. ..DDDD.. .KKKKKK. .KYKYKY. ..D..D.."></div>
+  <div class="scene-card"><canvas data-scene="4" role="img" aria-label="Pixel Belt scene: characters move along the belt and clear cubes of their color from the picture"></canvas></div>
 </div>
+</section>
 
-<section class="section" aria-labelledby="shots-h"><div class="wrap">
-  <h2 id="shots-h">Screens</h2>
-  <div class="shots"><img src="/img/screenshot-1.png" alt="Play screen: tap a character to put it on the belt, and it clears cubes of its color" width="636" height="1048" loading="lazy"><img src="/img/screenshot-2.png" alt="Map screen: each picture you complete brings color back to the island" width="636" height="1048" loading="lazy"><img src="/img/screenshot-3.png" alt="Clear screen: 20 regions and 300 pictures to collect" width="636" height="1048" loading="lazy"></div>
-  <p class="note">The screenshots show the Korean version.</p>
+<div class="parade" data-parade aria-hidden="true"></div>
+
+<section class="section" aria-labelledby="how-h"><div class="wrap">
+  <div class="section-head"><div><p class="kicker">How to play</p><h2 id="how-h">Three steps</h2></div></div>
+  <ol class="steps">
+    <li><div class="shot"><div class="phone"><img src="/img/play-dressed.jpg" alt="Play screen: tap a character in the line to put it on the belt" width="780" height="1688" loading="lazy"></div></div>
+      <div class="txt"><h3>Tap to send</h3><p class="muted">Tap the first character in a line. It moves onto the belt around the picture. The number on a character shows its shots left.</p></div></li>
+    <li><div class="shot"><div class="phone"><img src="/img/map-chapter.jpg" alt="Map screen: each picture you complete brings color back to the island" width="780" height="1688" loading="lazy"></div></div>
+      <div class="txt"><h3>Clear matching cubes</h3><p class="muted">The character moves along the belt. When the outermost cube has its color, it shoots and clears that cube. Clear the picture to bring color back to the island.</p></div></li>
+    <li><div class="shot"><div class="phone"><img src="/img/gallery.jpg" alt="Album screen: your pictures, sorted by region" width="780" height="1688" loading="lazy"></div></div>
+      <div class="txt"><h3>Collect pictures</h3><p class="muted">Collect 300 pictures from 20 regions in your album. Each region adds a new rule, such as ice cubes, keys, and tunnels.</p></div></li>
+  </ol>
 </div></section>
 
-<section class="section"><div class="wrap cols">
-  <div>
-    <h2>How to play</h2>
-    <ol class="steps"><li><p>Tap the first character in a line. It moves onto the belt around the picture.</p></li><li><p>The character moves along the belt. When the outermost cube has its color, it shoots and clears that cube.</p></li><li><p>A character with shots left goes back to a waiting slot. If all slots are full when it comes back, you lose.</p></li></ol>
-  </div>
-  <div>
-    <h2>When you complete a picture</h2>
-    <ul class="ticks"><li>Color comes back to the island, and you get color shards.</li><li>You can see your pictures again in the album.</li><li>20 regions and 300 pictures. Each region adds a new rule.</li></ul>
-  </div>
+<section class="section" aria-labelledby="res-h" style="padding-top:0"><div class="wrap">
+  <div class="section-head"><div><p class="kicker">Islanders</p><h2 id="res-h">37 islanders ride the belt</h2></div><p class="muted" style="max-width:26em">You meet islanders as you complete pictures. Bring them back with color shards, and your characters on the belt take their look.</p></div>
+  <ul class="residents" data-residents aria-label="Islanders"></ul>
 </div></section>
 
-<section class="section" aria-labelledby="info-h"><div class="wrap">
-  <h2 id="info-h">Information</h2>
-  <ul class="ticks">
-    <li><a href="/en/pixel-belt/privacy/">Privacy Policy</a></li>
-    <li><a href="/en/support/">Support</a></li>
-  </ul>
+<section class="section" aria-labelledby="info-h" style="padding-top:0"><div class="wrap">
+  <div class="contact">
+    <div><h2 id="info-h">Information</h2><p>Read the privacy policy and the payment and refund information.</p></div>
+    <div class="links"><a class="btn primary" href="/en/pixel-belt/privacy/">Privacy Policy</a><a class="btn" href="/en/support/">Support</a></div>
+  </div>
 </div></section>
 </main>
 
@@ -65,7 +67,7 @@
   <dl class="colophon">
     <dt>Company</dt><dd>DOHYPLATE (도이플레이트)</dd>
     <dt>Representative</dt><dd>Dohyung Kim</dd>
-    <dt>Business registration no.</dt><dd><span class="nowrap">794-13-02501</span> <span class="nowrap">(Republic of Korea)</span></dd>
+    <dt>Business reg. no.</dt><dd><span class="nowrap">794-13-02501</span> (Republic of Korea)</dd>
     <dt>Email</dt><dd><a href="mailto:ramon@dohyplate.com">ramon@dohyplate.com</a></dd>
   </dl>
   <div class="foot-links">

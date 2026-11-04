@@ -18,13 +18,13 @@
 
 | 파일 | 내용 |
 |---|---|
-| `style.css` | 모든 페이지의 모양. 네모로직 문제지 세계(흰 종이, 모눈, 남색 격자, 노랑 칸). 색은 `:root` 변수, 어두운 화면은 `prefers-color-scheme` |
-| `puzzle.js` | `data-art`가 있는 요소에 네모로직 격자를 그린다. 힌트 숫자는 그림에서 계산한다. 회사 소개(표식), 픽셀 벨트(벨티), 퇴근 탈출(덜 풀린 키보드 키) |
-| `fonts/Galmuri11-Bold.woff2` | 제목·숫자 글꼴 Galmuri(SIL OFL 1.1, `fonts/Galmuri-OFL.md`). 11px 픽셀 글꼴이라 11의 배수 크기(22·33·44·66px)에서 선명하다 |
+| `style.css` | 모든 페이지의 모양. 게임 화면과 같은 색(살구색 판, 남색 벨트, 노랑 버튼). 규칙은 `DESIGN.md` |
+| `site.js` | 픽셀 벨트 장면, 주민 행렬, 주민 목록을 그린다. 데이터는 `art.json` |
+| `art.json` | 게임 데이터(팔레트, 벨티, 주민 37명, 장면 그림 13개). `tools/export-art.mts`로 만든다 |
+| `img/` | 픽셀 벨트 아이콘과 최신 게임 화면 3장(2026-11-04) |
 | `PRODUCT.md` | 사이트의 사실과 제약(방문자, 회사 정보, 쓰지 않을 것). 디자인 작업 전에 읽는다 |
-| `DESIGN.md` | 디자인 규칙(색, 글꼴, 간격, 부품) |
-| `.impeccable/` | 디자인 작업 기록(방향 계약). 공개 사이트에는 나가지 않는다(Jekyll이 점으로 시작하는 폴더를 뺀다) |
-| `_config.yml` | GitHub Pages가 README·PRODUCT·DESIGN을 웹페이지로 내보내지 않게 한다 |
+| `DESIGN.md` | 디자인 규칙(색, 글꼴, 부품, 그림 다시 만들기) |
+| `_config.yml` | GitHub Pages가 README·PRODUCT·DESIGN·tools를 웹페이지로 내보내지 않게 한다 |
 
 ## 로컬에서 보기
 

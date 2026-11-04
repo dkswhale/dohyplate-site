@@ -10,6 +10,7 @@
 <link rel="alternate" hreflang="ko" href="https://dohyplate.com/pixel-belt/">
 <link rel="alternate" hreflang="en" href="https://dohyplate.com/en/pixel-belt/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="/style.css">
 <script src="/site.js" defer></script>
 </head>
@@ -23,7 +24,7 @@
 <main id="main">
 <section class="stage" aria-label="픽셀 벨트 소개">
 <div class="wrap game-hero">
-  <div>
+  <div class="reveal">
     <div class="game-title">
       <img class="game-icon" src="/img/logo-c.png" alt="픽셀 벨트 아이콘" width="84" height="84">
       <ul class="chips"><li class="tag">출시 준비 중</li></ul>
@@ -32,15 +33,15 @@
     <p class="lead" style="font-size:20px;color:#3C4456;margin-top:14px">벨트로 색을 지우는 픽셀 퍼즐</p>
     <ul class="chips" style="margin-top:22px"><li>20개 지역</li><li>300개 그림</li><li>섬 주민 37명</li><li>토스 · App&nbsp;Store · Google&nbsp;Play · 원스토어</li></ul>
   </div>
-  <div class="scene-card"><canvas data-scene="4" role="img" aria-label="픽셀 벨트 장면: 벨트를 도는 캐릭터가 그림판의 같은 색 큐브를 쏴서 지워요"></canvas></div>
+  <div class="scene-card reveal"><canvas data-scene="4" role="img" aria-label="픽셀 벨트 장면: 벨트를 도는 캐릭터가 그림판의 같은 색 큐브를 쏴서 지워요"></canvas></div>
 </div>
 </section>
 
 <div class="parade" data-parade aria-hidden="true"></div>
 
 <section class="section" aria-labelledby="how-h"><div class="wrap">
-  <div class="section-head"><div><p class="kicker">플레이 방법</p><h2 id="how-h">이렇게 플레이해요</h2></div></div>
-  <ol class="steps">
+  <div class="section-head reveal"><div><p class="kicker">플레이 방법</p><h2 id="how-h">이렇게 플레이해요</h2></div></div>
+  <ol class="steps reveal stagger">
     <li><div class="shot"><div class="phone"><img src="/img/play-dressed.webp" alt="플레이 화면: 대기열 캐릭터를 탭하면 벨트에 올라가요" width="600" height="1299" loading="lazy"></div></div>
       <div class="txt"><h3>탭해서 벨트에 태워요</h3><p class="muted">대기열 맨 앞 캐릭터를 탭하면 그림 둘레의 벨트에 올라가요. 캐릭터 위 숫자는 남은 탄이에요.</p></div></li>
     <li><div class="shot"><div class="phone"><img src="/img/map-chapter.webp" alt="지도 화면: 그림을 완성하면 섬에 색이 돌아와요" width="600" height="1299" loading="lazy"></div></div>
@@ -51,12 +52,12 @@
 </div></section>
 
 <section class="section" aria-labelledby="res-h" style="padding-top:0"><div class="wrap">
-  <div class="section-head"><div><p class="kicker">섬 주민</p><h2 id="res-h">벨트를 함께 타는 주민 37명</h2></div><p class="muted" style="max-width:26em">그림을 완성하며 만난 주민을 색 조각으로 되살리면, 벨트를 도는 캐릭터의 모습이 돼요.</p></div>
-  <ul class="residents" data-residents aria-label="주민 목록"></ul>
+  <div class="section-head reveal"><div><p class="kicker">섬 주민</p><h2 id="res-h">벨트를 함께 타는 주민 37명</h2></div><p class="muted" style="max-width:26em">그림을 완성하며 만난 주민을 색 조각으로 되살리면, 벨트를 도는 캐릭터의 모습이 돼요.</p></div>
+  <ul class="residents reveal" data-residents aria-label="주민 목록"></ul>
 </div></section>
 
 <section class="section" aria-labelledby="info-h" style="padding-top:0"><div class="wrap">
-  <div class="contact">
+  <div class="contact reveal">
     <div><h2 id="info-h">안내</h2><p>개인정보처리방침과 결제·환불 안내를 확인할 수 있어요.</p></div>
     <div class="links"><a class="btn primary" href="/pixel-belt/privacy/">개인정보처리방침</a><a class="btn" href="/support/">고객 문의</a></div>
   </div>

@@ -223,3 +223,13 @@ tr:last-child th, tr:last-child td { border-bottom: 0; }
   .phone { width: 27vw; border-width: 4px; border-radius: 18px; }
   .scene-cap { display: none; }
 }
+
+/* 스크롤 등장: 스크립트가 켜졌을 때(html.js)만 숨겼다가 화면에 들어오면 나타난다. 스크립트가 없으면 처음부터 다 보인다.
+   transform 대신 translate를 써서 휴대폰 기울기·마우스 올림 효과와 겹치지 않게 한다 */
+.js .reveal:not(.stagger), .js .reveal.stagger > * { opacity: 0; translate: 0 32px; transition: opacity 0.7s ease, translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.js .reveal.stagger > *:nth-child(2) { transition-delay: 0.12s; }
+.js .reveal.stagger > *:nth-child(3) { transition-delay: 0.24s; }
+.js .reveal.in:not(.stagger), .js .reveal.in.stagger > * { opacity: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal:not(.stagger), .js .reveal.stagger > * { opacity: 1; translate: 0 0; transition: none; }
+}

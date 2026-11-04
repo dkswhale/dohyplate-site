@@ -1,3 +1,11 @@
+// 스크롤 등장: .reveal이 화면에 들어오면 .in을 붙인다. 한 번 나타나면 다시 숨기지 않는다
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  els.forEach(e => io.observe(e));
+})();
+
 // 픽셀 벨트 장면. 그림·주민·벨티·팔레트는 게임 데이터(art.json)를 쓰고, 큐브·캐릭터 그리는 법은 게임 코드(src/ui/render.ts, sprites.ts)를 옮겼다.
 // [data-scene]: 벨트가 그림판을 돌고 주민이 같은 색 큐브를 지우는 장면. [data-parade]: 주민 행렬 띠. [data-residents]: 주민 목록.
 // 움직임 줄이기면 자동 재생 영상(퇴근 탈출 달리기)을 첫 장면에 멈춘다

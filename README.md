@@ -10,6 +10,7 @@
 | 회사 소개 | `/` | `/en/` |
 | 픽셀 벨트 | `/pixel-belt/` | `/en/pixel-belt/` |
 | 픽셀 벨트 개인정보처리방침 | `/pixel-belt/privacy/` | `/en/pixel-belt/privacy/` |
+| 칼퇴 러쉬 개인정보처리방침 | `/clockout/privacy/` | 없음 |
 | 고객 문의 | `/support/` | `/en/support/` |
 
 머리글과 바닥글은 페이지마다 같은 HTML이 들어 있다. 고칠 때 8개 파일을 모두 고친다.

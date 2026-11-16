@@ -5,15 +5,18 @@
 
 ## 페이지
 
-| 주소 | 한국어 | 영어 |
-|---|---|---|
-| 회사 소개 | `/` | `/en/` |
-| 픽셀 벨트 | `/pixel-belt/` | `/en/pixel-belt/` |
-| 픽셀 벨트 개인정보처리방침 | `/pixel-belt/privacy/` | `/en/pixel-belt/privacy/` |
-| 칼퇴 러쉬 개인정보처리방침 | `/clockout/privacy/` | 없음 |
-| 고객 문의 | `/support/` | `/en/support/` |
+| 주소 | 한국어 | 영어 | 일본어 | 번체 |
+|---|---|---|---|---|
+| 회사 소개 | `/` | `/en/` | 없음 | 없음 |
+| 픽셀 벨트 | `/pixel-belt/` | `/en/pixel-belt/` | 없음 | 없음 |
+| 픽셀 벨트 개인정보처리방침 | `/pixel-belt/privacy/` | `/en/pixel-belt/privacy/` | `/ja/pixel-belt/privacy/` | `/zh-hant/pixel-belt/privacy/` |
+| 픽셀 벨트 특정상거래법 표기(일본) | 없음 | 없음 | `/pixel-belt/legal/ja/` | 없음 |
+| 칼퇴 러쉬 개인정보처리방침 | `/clockout/privacy/` | 없음 | 없음 | 없음 |
+| 고객 문의 | `/support/` | `/en/support/` | 없음 | 없음 |
 
 머리글과 바닥글은 페이지마다 같은 HTML이 들어 있다. 고칠 때 8개 파일을 모두 고친다.
+
+일본어·번체 페이지 3개는 영어 머리글·바닥글을 쓴다(일본어·번체 회사 소개와 문의 페이지가 없다). `<body style="word-break:normal">`로 한국어용 줄바꿈 규칙을 끈다. 방침을 고치면 4개 언어판을 같이 고친다. 한국어판이 원본이다.
 
 ## 구조
 

@@ -1,0 +1,21 @@
+{
+ "v": 1,
+ "run": [
+  "run-01.m4a",
+  "run-02.m4a",
+  "run-03.m4a",
+  "run-04.m4a",
+  "run-05.m4a",
+  "run-06.m4a",
+  "run-07.m4a",
+  "run-08.m4a"
+ ],
+ "lobby": [
+  "lobby-01.m4a",
+  "lobby-02.m4a",
+  "lobby-03.m4a",
+  "lobby-04.m4a",
+  "lobby-05.m4a",
+  "lobby-06.m4a"
+ ]
+}
